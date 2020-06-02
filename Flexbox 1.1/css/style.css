@@ -78,7 +78,7 @@ main {
 .tab-item {
     background: #EFF8F7;
     color: #34ACA7;
-    padding: 26px 20px 22px 20px;
+    padding: 26px 19px 22px 19px;
 }
 
 .tab-item:hover {
@@ -114,7 +114,6 @@ main {
 
 .subscribe-description {
     display: flex;
-    align-items: center;
 }
 
 .subscribe-icon-wrapper {
@@ -129,7 +128,6 @@ main {
 
 .subscribe-form-conteiner {
     display: flex;
-    justify-content: space-between;
 }
 
 .subscribe-mail-input {
@@ -144,7 +142,7 @@ main {
     color: #E5E5E5;
 }
 
-.subscribe-mail-input:-ms-input-placeholder { /* для ie*/
+.subscribe-mail-input:-ms-input-placeholder { 
     font-size: 10px;
     color: #E5E5E5;
 }
@@ -168,16 +166,17 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 29px;
+    flex-wrap: wrap;
 }
 
 .cards-elem {
     display: flex;
     flex-direction: column;
-    width: 207px;
+    max-width: 207px;
 }
 
 .cards-elem img {
-    border: 2px solid #E5E5E5;
+    border: 2px solid #E5E5E5;  /* картинка изначально с белыми краями*/ 
 }
 
 .card-content {
@@ -240,7 +239,7 @@ aside {
     margin-right: 15px ;
 }
 
-.aside-elem-description {
+.aside-elem-title {
     color: #34ACA7;
     font-size: 14px;
     font-style: italic;
