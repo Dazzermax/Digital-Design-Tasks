@@ -1,0 +1,337 @@
+/* Reset css */
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+
+  a {
+      text-decoration: none;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+
+/* Reset css End */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    width: 1080px;
+    margin: 46px auto;
+    flex-direction: column;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 896px;
+}
+
+/* стили баннера и табов */
+.banner-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-img-wrapper{
+    background-image: url(../img/baner\(1\).png);
+    width: 896px;
+    height: 445px;
+}
+
+.banner-tabs {
+    display: flex;
+}
+
+.banner-tabs > a {
+    flex-grow: 1;
+}
+
+.banner-tabs > a:not(:last-child) {
+    margin-right: 1px;
+}
+
+.tab-item {
+    background: #EFF8F7;
+    color: #34ACA7;
+    padding: 26px 20px 22px 20px;
+}
+
+.tab-item:hover {
+    background: #D9EFEC;
+}
+
+.tab-item:not(:last-child) {
+    margin-right: 1px;
+}
+
+.tab-item-title {
+    font-size: 18px;
+}
+
+.tab-item-description {
+    /* padding: 4px 0;  использовать паддинг или лайн-хейдз(как в макете) для внутренних отступов в тексте?*/ 
+    line-height: 19px;
+    font-size: 10px;
+    font-style: italic;
+}
+
+/* стили блока с формой и подпиской */
+
+.subscribe-box {
+    margin-top: 31px;
+    display: flex;
+    border-top: 1px dashed #E5E5E5;
+    border-bottom: 1px dashed #E5E5E5;
+    padding: 10px 18px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe-description {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-icon-wrapper {
+    margin-right: 16px;
+}
+
+.subcribe-text-description {
+    font-size: 14px;
+    font-style: italic;
+    width: 530px;
+}
+
+.subscribe-form-conteiner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe-mail-input {
+    border: 1px solid #E5E5E5;
+    padding: 3px 6px 3px 6px; 
+    width: 160px;
+    margin-right: 18px;
+}
+
+.subscribe-mail-input::placeholder {
+    font-size: 10px;
+    color: #E5E5E5;
+}
+
+.subscribe-mail-input:-ms-input-placeholder { /* для ie*/
+    font-size: 10px;
+    color: #E5E5E5;
+}
+
+.subscribe-mail-btn {
+    width: 80px;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    padding: 6px 17px 7px 18px;
+    font-size: 10px;
+    background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+}
+
+.subscribe-mail-btn:hover {
+    border-color: rgb(80, 75, 75);
+}
+
+/* стили карточек со статьями */
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+}
+
+.cards-elem {
+    display: flex;
+    flex-direction: column;
+    width: 207px;
+}
+
+.cards-elem img {
+    border: 2px solid #E5E5E5;
+}
+
+.card-content {
+    margin-top: 11px;
+}
+
+.card-title {
+    color: #34ACA7;
+}
+
+.card-description {
+    margin-top: 9px;
+    font-size: 14px;
+}
+
+.card-footer {
+    margin-top: 11px;
+    font-size: 14px;
+}
+
+.card-footer > a {
+    color: #34ACA7;
+}
+.card-footer > a:hover {
+    text-decoration: underline;
+}
+
+.card-date {
+    color: #E5E5E5;
+}
+
+/* aside bar стили */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+}
+
+.icon-logo {
+    text-align: center;
+}
+
+.aside-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-nav-elem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 31px;
+}
+
+.aside-nav-elem:hover {
+    border-right: 3px solid #34ACA7;
+}
+
+.aside-nav-elem > img {
+    margin-right: 15px ;
+}
+
+.aside-elem-description {
+    color: #34ACA7;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.tweet-friends-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-tweet {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-header {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: Verdana;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #E5E5E5;
+}
+
+.tweet-btn {
+    background: #FFFFFF;
+    margin-top: 9px;
+    display: flex;
+    align-items: center;
+    color: #34ACA7;
+    border: 1px solid #E5E5E5;
+    font-size: 10px;
+    font-style: italic;
+    border-radius: 5px;
+    padding: 7px 13px 7px 7px;
+}
+
+.tweet-btn:hover {
+    border-color: #34ACA7;
+}
+
+.tweet-btn img {
+    margin-right: 5px;
+}
+
+.aside-friends {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-text-block {
+    margin: 10px 0 10px;
+    font-size: 10px;
+    font-style: italic;
+    line-height: 19px;
+}
+
+/* footer стили */
+footer {
+    margin-top: 41px;
+    border-top: 2px solid #E5E5E5;
+}
+.contacts {
+    font-size: 12px;
+    padding: 24px 8px 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-elem {
+    color: #34ACA7;
+}
+
+.contacts-elem:hover {
+    text-decoration: underline;
+}
+
+.contacts-elem:not(:last-of-type) {
+    border-right: 1px solid #E5E5E5;
+    padding-right: 4px;
+}
+
+.contacts-textbox {
+    margin-top: 3px;
+    color: #E5E5E5;
+}
+
+.icons-conteiner img {
+    cursor: pointer;
+}
+
+.icons-conteiner img:not(:last-of-type) {
+    margin-right: 8px;
+}
