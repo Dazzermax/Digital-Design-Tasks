@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.face-conteiner {
+    display: flex;
+    margin: 10% auto;
+    width: 560px;
+    border: 1px solid #000;
+    justify-content: space-between;
+}
+
+.face-element {
+    border: 3px solid rgb(150, 144, 144);
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.face-element_person-1{
+    background-image: url(img/person1.jpg);
+}
+
+.face-element_person-2{
+    background-image: url(img/person2.jpg);
+}
+
+.face-element_person-3{
+    background-image: url(img/person3.jpg);
+}
+
+a {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background-image: url(img/social_icons.png);
+    
+}
+
+.vk {
+    background-position: 66% 98%;
+    top: 2%;
+    left: 7%;
+}
+
+.vk:hover {
+    background-position: 66% 1%;
+}
+
+.twitter {
+    background-position: 33% 98%;
+    top: 19%;
+    left: -5%;
+}
+
+.twitter:hover {
+    background-position: 33% 1%;
+}
+
+.fb {
+    background-position: 1% 98%;
+    top: 40%;
+    left: -9% 
+}
+
+.fb:hover {
+    background-position: 1% 1%;
+}
+
+.mail {
+    background-position: 99% 98%;
+    top: 91%;
+    left: 40%;  
+}
+
+.mail:hover {
+    background-position: 99% 1%;
+}
