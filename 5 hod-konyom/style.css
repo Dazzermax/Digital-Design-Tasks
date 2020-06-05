@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-div {
-    color:red;
-    font: 30px;
-}
-
 table {
     border-collapse: collapse;
     margin: 40px auto;

@@ -16,9 +16,8 @@
 
 .mod {
     position: absolute;
-    /* width: 15px;
-    height: 15px; */
-    padding: 7px;
+    width: 15px;
+    height: 15px;
     border: 1px solid rgb(163, 160, 160);
 }
 
@@ -51,23 +50,21 @@
 
 
 
+/* Вариант с псевдоэлементами не получилось сделать резиновым */
 
-
-
-/* Не додумал */
-/* main::after{
+/* .main::after{
     position: absolute;
     content: '';
     border-top: 1px solid rgb(163, 160, 160);
     border-bottom: 1px solid rgb(163, 160, 160);
     display: block;
-    width: 99%;
-    top: -1px;
-    left: -20px;
+    width: 100%;
+    top: -2%;
+    left: -5%;
     padding: 24px;
 }
 
-main::before{
+.main::before{
     box-sizing: border-box;
     position: absolute;
     content: '';
@@ -79,3 +76,13 @@ main::before{
     left: -1px;
     padding: 41px;
 } */
+
+
+
+
+
+
+
+
+
+
