@@ -1,7 +1,7 @@
 /* Reset css */
 html {
     box-sizing: border-box;
-    font-size: 100%;
+    font-size: 14px;
   }
   
   *, *:before, *:after {
@@ -63,21 +63,20 @@ main {
 }
 
 /* стили баннера и табов */
-.banner-wrapper {
-    display: flex;
-    flex-direction: column;
-}
 
-.banner-header{
+.banner-header {
     background-image: url(../img/baner\(1\).png);
     width: 896px;
     height: 445px;
     position: relative;
 }
 
-.banner-header-title {
+.banner-header div {
     position: absolute;
     font-style: italic;
+}
+
+.banner-header-title {
     font-size: 22px;
     padding: 12px 21px 12px 19px;
     letter-spacing: 0.01em;
@@ -87,19 +86,11 @@ main {
 }
 
 .banner-header-subtitle {
-    position: absolute;
-    font-style: italic;
-    font-size: 14px;
-    line-height: 14px;
     color: #fff;
     background-color: #000;
-    padding: 15px 35px 13px 24px;
+    padding: 13px 35px 13px 24px;
     left: 0%;
     top: 75%;
-}
-
-.banner-tabs {
-    display: flex;
 }
 
 .banner-tabs > a {
@@ -124,10 +115,6 @@ main {
     background: #D9EFEC;
 }
 
-.tab-item:not(:last-child) {
-    margin-right: 1px;
-}
-
 .tab-item-title {
     font-size: 18px;
 }
@@ -142,7 +129,6 @@ main {
 
 .subscribe-box {
     margin-top: 31px;
-    display: flex;
     border-top: 1px dashed #E5E5E5;
     border-bottom: 1px dashed #E5E5E5;
     padding: 10px 18px;
@@ -150,22 +136,13 @@ main {
     align-items: center;
 }
 
-.subscribe-description {
-    display: flex;
-}
-
 .subscribe-icon-wrapper {
     margin-right: 16px;
 }
 
 .subcribe-text-description {
-    font-size: 14px;
     font-style: italic;
     width: 530px;
-}
-
-.subscribe-form-conteiner {
-    display: flex;
 }
 
 .subscribe-mail-input {
@@ -214,15 +191,12 @@ main {
 /* стили карточек со статьями */
 
 .cards-wrapper {
-    display: flex;
     justify-content: space-between;
     margin-top: 29px;
     flex-wrap: wrap;
 }
 
 .cards-elem {
-    display: flex;
-    flex-direction: column;
     max-width: 207px;
 }
 
@@ -230,22 +204,22 @@ main {
     border: 2px solid #E5E5E5;  /* картинка изначально с белыми краями*/ 
 }
 
-.card-content {
+.card-text-content {
     margin-top: 11px;
 }
 
 .card-title {
+    font-size: 16px;
     color: #34ACA7;
 }
 
 .card-description {
     margin-top: 9px;
-    font-size: 14px;
+    line-height: 20px;
 }
 
 .card-footer {
     margin-top: 11px;
-    font-size: 14px;
 }
 
 .card-footer > a {
@@ -262,8 +236,6 @@ main {
 /* aside bar стили */
 
 aside {
-    display: flex;
-    flex-direction: column;
     width: 140px;
 }
 
@@ -271,13 +243,7 @@ aside {
     text-align: center;
 }
 
-.aside-nav {
-    display: flex;
-    flex-direction: column;
-}
-
 .aside-nav-elem {
-    display: flex;
     align-items: center;
     margin-bottom: 31px;
 }
@@ -287,23 +253,12 @@ aside {
 }
 
 .aside-nav-elem > img {
-    margin-right: 15px ;
+    margin-right: 15px;
 }
 
 .aside-elem-title {
     color: #34ACA7;
-    font-size: 14px;
     font-style: italic;
-}
-
-.tweet-friends-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.aside-tweet {
-    display: flex;
-    flex-direction: column;
 }
 
 .aside-header {
@@ -314,10 +269,16 @@ aside {
     border-bottom: 1px dashed #E5E5E5;
 }
 
+.aside-text-block {
+    margin-top: 10px;
+    font-size: 10px;
+    font-style: italic;
+    line-height: 19px;
+}
+
 .tweet-btn {
     background: #FFFFFF;
-    margin-top: 9px;
-    display: flex;
+    margin-top: 10px;
     align-items: center;
     color: #34ACA7;
     border: 1px solid #E5E5E5;
@@ -339,18 +300,6 @@ aside {
     margin-right: 5px;
 }
 
-.aside-friends {
-    display: flex;
-    flex-direction: column;
-}
-
-.aside-text-block {
-    margin: 10px 0 10px;
-    font-size: 10px;
-    font-style: italic;
-    line-height: 19px;
-}
-
 /* footer стили */
 footer {
     margin-top: 41px;
@@ -359,7 +308,6 @@ footer {
 .contacts {
     font-size: 12px;
     padding: 24px 8px 37px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -371,7 +319,7 @@ footer {
 .contacts-elem:hover {
     text-decoration: underline;
 }
-
+/* сделать псевдоэлементом */
 .contacts-elem:not(:last-of-type) {
     border-right: 1px solid #E5E5E5;
     padding-right: 4px;
