@@ -285,7 +285,7 @@ aside {
     font-size: 10px;
     font-style: italic;
     border-radius: 5px;
-    padding: 9px 0px 7px 7px;
+    padding: 7px 0px 7px 7px;
 }
 
 .tweet-btn:hover {
@@ -314,15 +314,23 @@ footer {
 
 .contacts-elem {
     color: #34ACA7;
+    position: relative;
+    margin-right: 7px;
 }
 
 .contacts-elem:hover {
     text-decoration: underline;
 }
-/* сделать псевдоэлементом */
-.contacts-elem:not(:last-of-type) {
-    border-right: 1px solid #E5E5E5;
-    padding-right: 4px;
+
+.contacts-elem:not(:last-of-type)::after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 12px;
+    width: 1px;
+    top: 10%;
+    right: -6px;
+    background-color: #E5E5E5;
 }
 
 .contacts-textbox {
