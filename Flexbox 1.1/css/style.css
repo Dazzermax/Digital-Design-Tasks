@@ -30,6 +30,7 @@ body {
 
 button {
     cursor: pointer;
+    outline: none;
 }
 
 .wrapper {
@@ -68,7 +69,7 @@ main {
 }
 
 .banner-tabs > a {
-    flex-grow: 1;
+    flex: 1 0 auto;
 }
 
 .banner-tabs > a:not(:last-child) {
@@ -79,6 +80,10 @@ main {
     background: #EFF8F7;
     color: #34ACA7;
     padding: 26px 19px 22px 19px;
+}
+
+.active {
+    background-color: #D9EFEC;
 }
 
 .tab-item:hover {
@@ -94,8 +99,7 @@ main {
 }
 
 .tab-item-description {
-    /* padding: 4px 0;  использовать паддинг или лайн-хейдз(как в макете) для внутренних отступов в тексте?*/ 
-    line-height: 19px;
+    padding: 4px 0;  
     font-size: 10px;
     font-style: italic;
 }
@@ -137,6 +141,15 @@ main {
     margin-right: 18px;
 }
 
+.subscribe-mail-input:hover {
+    border-color:rgb(192, 192, 192);
+}
+
+.subscribe-mail-input:focus {
+    outline: none;
+    border-color: rgb(65, 60, 60);
+}
+
 .subscribe-mail-input::placeholder {
     font-size: 10px;
     color: #E5E5E5;
@@ -157,7 +170,11 @@ main {
 }
 
 .subscribe-mail-btn:hover {
-    border-color: rgb(80, 75, 75);
+    border-color: rgb(192, 192, 192);
+}
+
+.subscribe-mail-btn:active {
+    border-color: rgb(65, 60, 60);
 }
 
 /* стили карточек со статьями */
@@ -273,11 +290,15 @@ aside {
     font-size: 10px;
     font-style: italic;
     border-radius: 5px;
-    padding: 7px 13px 7px 7px;
+    padding: 9px 0px 7px 7px;
 }
 
 .tweet-btn:hover {
     border-color: #34ACA7;
+}
+
+.tweet-btn:active {
+    border-color: rgb(17, 240, 229);
 }
 
 .tweet-btn img {
