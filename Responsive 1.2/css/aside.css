@@ -66,3 +66,50 @@ aside {
 .tweet-btn__img {
     margin-right: 5px;
 }
+
+@media screen and (max-width: 991px) {
+    
+    aside {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .aside-menu {
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-item {
+        position: relative;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .menu-item:hover::after {
+        position: absolute;
+        top: 102%;
+        left: 0%;
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #34ACA7;
+    }
+
+    .menu-item:hover {
+        border-right: 0;
+    }
+
+    .menu-item__img {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .tweets {
+        display: none;
+    }
+
+}

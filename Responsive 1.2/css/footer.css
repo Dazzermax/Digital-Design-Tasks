@@ -41,4 +41,19 @@ footer {
     color: #E5E5E5;
 }
 
+@media screen and (max-width: 1176px) {
 
+    .contacts {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    
+    footer {
+        margin-top: 100px;
+    }
+    
+}

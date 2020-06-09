@@ -15,7 +15,7 @@ body {
 .wrapper {
     display: flex;
     width: 1080px;
-    margin: 46px auto;
+    margin: 46px auto 0;
     flex-direction: column;
 }
 
@@ -25,3 +25,35 @@ body {
     justify-content: space-between;
 }
 
+/* Screen 992-1176 */
+
+@media screen and (max-width: 1176px) {
+    
+    .wrapper {
+       max-width: 896px;
+    }
+
+}
+
+/* Screen 768-992 */
+
+@media screen and (max-width: 991px) {
+    
+    .wrapper {
+        max-width: 712px;
+        margin-top: 25px; 
+     }
+
+     .wrapper__main-aside {
+        flex-direction: column-reverse;
+     }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .wrapper {
+        max-width: 560px;;
+    }
+    
+}

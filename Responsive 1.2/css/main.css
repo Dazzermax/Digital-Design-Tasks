@@ -6,8 +6,9 @@ main {
 
 /* стили слайдера и табов */
 
+    /* слайдер */
+
 .slider__header {
-    width: 896px;
     height: 445px;
     position: relative;
 }
@@ -38,6 +39,8 @@ main {
     left: 0%;
     top: 75%;
 }
+
+    /* табы */
 
 .tab__link {
     flex: 1;
@@ -92,7 +95,7 @@ main {
 
 .subscribe-box__text {
     font-style: italic;
-    width: 82%
+    width: 85%
 }
 
 .main-form__input {
@@ -176,10 +179,55 @@ main {
     color: #34ACA7;
 }
 
-.cards__link:hover {
+.cards__link-undeline:hover {
     text-decoration: underline;
 }
 
 .cards__date {
     color: #E5E5E5;
+}
+
+/* Медиа запросы */
+
+@media screen and (max-width: 1176px) {
+
+    main {
+        max-width: 712px;
+    }
+
+    .tab__link:not(:last-child) {
+        margin-right: 0;
+        border-right: 1px solid #D6E6E6;
+    }
+
+    .tab {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 9px;
+    }
+
+    .tab__title {
+        font-size: 14px;
+    }
+
+    .tab__subtitle {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+
+    main {
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    main {
+        width: 545px;
+    }
+    
 }
