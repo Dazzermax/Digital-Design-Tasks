@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper {
+    display: flex;
+    width: 1080px;
+    margin: 46px auto;
+    flex-direction: column;
+}
+
+.wrapper__main-aside {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+

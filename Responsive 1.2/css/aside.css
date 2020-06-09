@@ -1,0 +1,68 @@
+/* aside bar стили */
+
+aside {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: center;
+}
+
+.menu-item {
+    align-items: center;
+    margin-bottom: 31px;
+}
+
+.menu-item:hover {
+    border-right: 3px solid #34ACA7;
+}
+
+.menu-item__img {
+    margin-right: 15px;
+}
+
+.menu-item__title {
+    color: #34ACA7;
+    font-style: italic;
+}
+
+.tweet-block__title {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: Verdana;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #E5E5E5;
+}
+
+.tweet-block__text {
+    margin-top: 10px;
+    font-size: 10px;
+    font-style: italic;
+    line-height: 19px;
+}
+
+.tweet-btn {
+    background: #FFFFFF;
+    margin-top: 10px;
+    align-items: center;
+    color: #34ACA7;
+    border: 1px solid #E5E5E5;
+    font-size: 10px;
+    font-style: italic;
+    border-radius: 5px;
+    padding: 7px 0px 7px 7px;
+}
+
+.tweet-btn:hover {
+    border-color: #34ACA7;
+}
+
+.tweet-btn:active {
+    border-color: rgb(17, 240, 229);
+}
+
+.tweet-btn__img {
+    margin-right: 5px;
+}

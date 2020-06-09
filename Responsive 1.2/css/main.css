@@ -1,0 +1,185 @@
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 896px;
+}
+
+/* стили слайдера и табов */
+
+.slider__header {
+    width: 896px;
+    height: 445px;
+    position: relative;
+}
+
+.slider__header img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__header div {
+    position: absolute;
+    font-style: italic;
+}
+
+.slider__title {
+    font-size: 22px;
+    padding: 12px 21px 12px 19px;
+    letter-spacing: 0.01em;
+    background-color: #fff;
+    left: 0%;
+    top: 64%
+}
+
+.slider__subtitle {
+    color: #fff;
+    background-color: #000;
+    padding: 13px 35px 13px 24px;
+    left: 0%;
+    top: 75%;
+}
+
+.tab__link {
+    flex: 1;
+}
+
+.tab__link:not(:last-child) {
+    margin-right: 1px;
+}
+
+.tab {
+    background: #EFF8F7;
+    color: #34ACA7;
+    padding: 26px 19px 22px 19px;
+}
+
+.tab-active {
+    background-color: #D9EFEC;
+}
+
+.tab:hover {
+    background: #D9EFEC;
+}
+
+.tab__title {
+    font-size: 18px;
+}
+
+.tab__subtitle {
+    padding: 4px 0;  
+    font-size: 10px;
+    font-style: italic;
+}
+
+/* стили блока с формой и подпиской */
+
+.subscribe-box {
+    margin-top: 31px;
+    border-top: 1px dashed #E5E5E5;
+    border-bottom: 1px dashed #E5E5E5;
+    padding: 10px 18px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe-box__img {
+    margin-right: 16px;
+}
+
+.subscribe-box__description {
+    align-items: center;
+}
+
+.subscribe-box__text {
+    font-style: italic;
+    width: 82%
+}
+
+.main-form__input {
+    border: 1px solid #E5E5E5;
+    padding: 3px 6px 3px 6px; 
+    width: 160px;
+    margin-right: 18px;
+}
+
+.main-form__input:hover {
+    border-color:rgb(192, 192, 192);
+}
+
+.main-form__input:focus {
+    outline: none;
+    border-color: rgb(65, 60, 60);
+}
+
+.main-form__input::placeholder {
+    font-size: 10px;
+    color: #E5E5E5;
+}
+
+.main-form__input:-ms-input-placeholder { 
+    font-size: 10px;
+    color: #E5E5E5;
+}
+
+.main-form__btn {
+    width: 80px;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    padding: 6px 17px 7px 18px;
+    font-size: 10px;
+    background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+}
+
+.main-form__btn:hover {
+    border-color: rgb(192, 192, 192);
+}
+
+.main-form__btn:active {
+    border-color: rgb(65, 60, 60);
+}
+
+/* стили карточек со статьями */
+
+.cards {
+    justify-content: space-between;
+    margin-top: 29px;
+    flex-wrap: wrap;
+}
+
+.cards__content {
+    max-width: 23%;
+}
+
+.cards__img {
+    border: 2px solid #E5E5E5;  /* картинка изначально с белыми краями*/ 
+}
+
+.cards__text {
+    margin-top: 11px;
+}
+
+.cards__title {
+    font-size: 16px;
+    color: #34ACA7;
+}
+
+.cards__description {
+    margin-top: 9px;
+    line-height: 20px;
+}
+
+.cards__footer {
+    margin-top: 11px;
+}
+
+.cards__link {
+    color: #34ACA7;
+}
+
+.cards__link:hover {
+    text-decoration: underline;
+}
+
+.cards__date {
+    color: #E5E5E5;
+}

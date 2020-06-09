@@ -3,159 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Task 1.1 Flexbox</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Task 1.2 Responsive</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="conteiner"> 
+        <div class="wrapper__main-aside"> 
             <main>
-                <div class="banner-wrapper col">
-                    <div class="banner-header">
-                        <img src="img/banner.jpg" alt="Banner">
-                        <div class="banner-header-title">Share your Foor Sence</div>
-                        <div class="banner-header-subtitle">Submit yout favorite recipes, become a contributor, or get inteviewed.</div> 
+                <div class="slider col">
+                    <div class="slider__header">
+                        <img class="slider__img" src="img/banner.jpg" alt="Banner" >
+                        <div class="slider__title">Share your Foor Sence</div>
+                        <div class="slider__subtitle">Submit yout favorite recipes, become a contributor, or get inteviewed.</div> 
                     </div>
-                    <nav class="banner-tabs row">
-                        <a href="#">
-                            <div class="tab-item">
-                                <span class="tab-item-title">Tastemakers</span>
-                                <p class="tab-item-description">Feast your eyes & get reciepes!</p>
+                    <nav class="slider__tabs row">
+                        <a class="tab__link" href="#">
+                            <div class="tab">
+                                <span class="tab__title">Tastemakers</span>
+                                <p class="tab__subtitle">Feast your eyes & get reciepes!</p>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="tab-item">
-                                <span class="tab-item-title">Blog</span>
-                                <p class="tab-item-description">News, how-tos, stories, and more</p>
+                        <a class="tab__link" href="#">
+                            <div class="tab">
+                                <span class="tab__title">Blog</span>
+                                <p class="tab__subtitle">News, how-tos, stories, and more</p>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="tab-item">
-                                <span class="tab-item-title">The A-List</span>
-                                <p class="tab-item-description">Handpicked, absolute favorites</p>
+                        <a class="tab__link" href="#">
+                            <div class="tab">
+                                <span class="tab__title">The A-List</span>
+                                <p class="tab__subtitle">Handpicked, absolute favorites</p>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="tab-item active">
-                                <span class="tab-item-title">Contribute</span>
-                                <p class="tab-item-description">We want to hear from you!</p>
+                        <a class="tab__link" href="#">
+                            <div class="tab tab-active">
+                                <span class="tab__title">Contribute</span>
+                                <p class="tab__subtitle">We want to hear from you!</p>
                             </div>
                         </a>
                     </nav>
                 </div>
-                <div class="subscribe-box row">
-                    <div class="subscribe-description row">
-                        <div class="subscribe-icon-wrapper">
-                            <img src="icons/mail-icon.png" alt="mail-icon">
-                        </div>
-                        <span class="subcribe-text-description">Sign up for out newsletter to receive a handpicked selection of the best stories, recipes, and news, delivered weekly to your inbox.</span>
+                <section class="subscribe-box row">
+                    <div class="subscribe-box__description row">
+                        <img class="subscribe-box__img" src="icons/mail-icon.png" alt="mail-icon">
+                        <span class="subscribe-box__text">Sign up for out newsletter to receive a handpicked selection of the best stories, recipes, and news, delivered weekly to your inbox.</span>
                     </div>
-                    <form action="#" class="subscribe-form-conteiner row">
-                        <input type="email" name="email" class="subscribe-mail-input" placeholder="Email">
-                        <button type="submit" class="subscribe-mail-btn">Subscribe</button>
+                    <form class="main-form row" action="#" >
+                        <input class="main-form__input" type="email" name="email"  placeholder="Email">
+                        <button class="main-form__btn" type="submit" >Subscribe</button>
                     </form>
-                </div>
-                <div class="cards-wrapper row">
-                    <div class="cards-elem col">
-                        <a href="#" title="Read..."><img src="img/image(1).png" alt="Cookbooks"></a>
-                        <div class="card-text-content">
-                            <a href="#"><span class="card-title">2012’s Best Summer Cookbooks</span></a>
-                            <p class="card-description">With the best of the season coming from “orchards, farms and gardens,” NPR has put together an impressive collection of 10 summer cookbooks.</p>
+                </section>
+                <section class="cards row">
+                    <article class="cards__content col">
+                        <a class="cards__link" href="#" title="Read...">
+                            <img class="cards__img" src="img/image(1).png" alt="Cookbooks">
+                        </a>
+                        <div class="cards__text">
+                            <a class="cards__link" href="#">
+                                <span class="cards__title">2012’s Best Summer Cookbooks</span>
+                            </a>
+                            <p class="cards__description">With the best of the season coming from “orchards, farms and gardens,” NPR has put together an impressive collection of 10 summer cookbooks.</p>
                         </div>
-                        <div class="card-footer">
-                            <span class="card-date">May 23, 2012 /</span>
-                            <a href="">Read...</a>
+                        <div class="cards__footer">
+                            <time class="cards__date" datetime="2012-05-23">May 23, 2012 /</time>
+                            <a class="cards__link" href="#">Read...</a>
                         </div>
-                    </div>
-                    <div class="cards-elem col">
-                        <a href="#" title="Read..."><img src="img/image(2).png" alt="Vegetable Chips"></a>
-                        <div class="card-text-content">
-                            <a href="#"><span class="card-title">How to Make Vegetable Chips</span></a>
-                            <p class="card-description">About a month ago, I ate almost an entire box of kale chips. My brother and I were visiting our cousin in Brooklyn, and before a very thoughtfully prepared vagan...</p>
+                    </article>
+                    <article class="cards__content col">
+                        <a class="cards__link" href="#" title="Read...">
+                            <img class="cards__img" src="img/image(2).png" alt="Vegetable Chips">
+                        </a>
+                        <div class="cards__text">
+                            <a class="cards__link" href="#">
+                                <span class="cards__title">How to Make Vegetable Chips</span>
+                            </a>
+                            <p class="cards__description">About a month ago, I ate almost an entire box of kale chips. My brother and I were visiting our cousin in Brooklyn, and before a very thoughtfully prepared vagan...</p>
                         </div>
-                        <div class="card-footer">
-                            <span class="card-date">May 17, 2012 /</span>
-                            <a href="">Read...</a>
+                        <div class="cards__footer">
+                            <time class="cards__date" datetime="2012-05-17">May 17, 2012 /</time>
+                            <a class="cards__link" href="#">Read...</a>
                         </div>
-                    </div>
-                    <div class="cards-elem col">
-                        <a href="#" title="Read..."><img src="img/image(3).png" alt="Hands with greens"></a>
-                        <div class="card-text-content">
-                            <a href="#"><span class="card-title">Join us on Pinterest!</span></a>
-                            <p class="card-description">If I could curate a cookbook for you, this would be it.</p>
+                    </article>
+                    <article class="cards__content col">
+                        <a class="cards__link" href="#" title="Read...">
+                            <img class="cards__img" src="img/image(3).png" alt="Hands with greens">
+                        </a>
+                        <div class="cards__text">
+                            <a class="cards__link" href="#">
+                                <span class="cards__title">Join us on Pinterest!</span>
+                            </a>
+                            <p class="cards__description">If I could curate a cookbook for you, this would be it.</p>
                         </div>
-                        <div class="card-footer">
-                            <span class="card-date">May 23, 2012 /</span>
-                            <a href="">Read...</a>
+                        <div class="cards__footer">
+                            <time class="cards__date" datetime="2012-05-23">May 23, 2012 /</time>
+                            <a class="cards__link" href="#">Read...</a>
                         </div>
-                    </div>
-                    <div class="cards-elem col">
-                        <a href="#" title="Read..."><img src="img/image(4).png" alt="Sunday Supper"></a>
-                        <div class="card-text-content">
-                            <a href="#"><span class="card-title">Recipes from a Sunday Supper</span></a>
-                            <p class="card-description">I could not figure out what to do with the delectable slices of Pear Cake that I brought home from this wonderful Sunday supper - eat them slowly, a little bit at...</p>
+                    </article>
+                    <article class="cards__content col">
+                        <a class="cards__link" href="#" title="Read...">
+                            <img class="cards__img" src="img/image(4).png" alt="Sunday Supper">
+                        </a>
+                        <div class="cards__text">
+                            <a class="cards__link" href="#">
+                                <span class="cards__title">Recipes from a Sunday Supper</span>
+                            </a>
+                            <p class="cards__description">I could not figure out what to do with the delectable slices of Pear Cake that I brought home from this wonderful Sunday supper - eat them slowly, a little bit at...</p>
                         </div>
-                        <div class="card-footer">
-                            <span class="card-date">May 17, 2012 /</span>
-                            <a href="">Read...</a>
+                        <div class="cards__footer">
+                            <time class="cards__date" datetime="2012-05-23">May 17, 2012 /</time>
+                            <a class="cards__link" href="#">Read...</a>
                         </div>
-                    </div>
-                </div>
+                    </article>
+                </section>
             </main>
-            <aside class="col">
-                <a href="#">
-                    <div class="icon-logo">
-                        <img src="icons/icon-logo.png" alt="icon-logo">
-                    </div>
-                </a>
-                <nav class="aside-nav col">
+            <aside>
+                <div class="logo">
+                    <a class="logo__link" href="#" >
+                        <img class="logo__img" src="icons/icon-logo.png" alt="food-sense" >
+                    </a>
+                </div>
+                <nav class="aside-menu col">
                     <a href="#">
-                        <div class="aside-nav-elem row">
-                            <img src="icons/food-icon.png" alt="food-icon">
-                            <span class="aside-elem-title">Tastemakers</span>
+                        <div class="menu-item row">
+                            <img class="menu-item__img" src="icons/food-icon.png" alt="food-icon">
+                            <span class="menu-item__title">Tastemakers</span>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="aside-nav-elem row">
-                            <img src="icons/blog-icon.png" alt="blog-icon">
-                            <span class="aside-elem-title">Blog</span>
+                        <div class="menu-item row">
+                            <img class="menu-item__img" src="icons/blog-icon.png" alt="blog-icon">
+                            <span class="menu-item__title">Blog</span>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="aside-nav-elem row">
-                            <img src="icons/a-list-icon.png" alt="a-list-icon">
-                            <span class="aside-elem-title">The A-List</span>
+                        <div class="menu-item row">
+                            <img class="menu-item__img" src="icons/a-list-icon.png" alt="a-list-icon">
+                            <span class="menu-item__title">The A-List</span>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="aside-nav-elem row">
-                            <img src="icons/camera-icon.png" alt="camera-icon">
-                            <span class="aside-elem-title">Contribure</span>
+                        <div class="menu-item row">
+                            <img class="menu-item__img" src="icons/camera-icon.png" alt="camera-icon">
+                            <span class="menu-item__title">Contribure</span>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="aside-nav-elem row">
-                            <img src="icons/about-icon.png" alt="about-icon">
-                            <span class="aside-elem-title">About</span>
+                        <div class="menu-item row">
+                            <img class="menu-item__img" src="icons/about-icon.png" alt="about-icon">
+                            <span class="menu-item__title">About</span>
                         </div>
                     </a>
                 </nav>
-                <div class="tweet-friends-wrapper col">
-                    <div class="aside-tweet col">
-                        <span class="aside-header">Latest tweet</span>
+                <div class="tweets col">
+                    <div class="tweet-block col">
+                        <span class="tweet-block__title">Latest tweet</span>
                         <button class="tweet-btn row">
-                            <img src="icons/twitter-ic.png" alt="twitter-icon">
-                            <span>Join the Conversation</span>
+                            <img class="tweet-btn__img" src="icons/twitter-ic.png" alt="twitter-icon">
+                            <span class="tweet-btn__text" >Join the Conversation</span>
                         </button>
                     </div>
-                    <div class="aside-friends col">
-                        <span class="aside-header">Let’s be friends!</span>
-                        <p class="aside-text-block">
+                    <div class="tweet-block col">
+                        <span class="tweet-block__title">Let’s be friends!</span>
+                        <p class="tweet-block__text">
                             For weekly finds, community recommendations, and more, like us on Facebook.
                         </p>
                         <button class="tweet-btn row">
-                            <img src="icons/twitter-ic.png" alt="twitter-icon">
-                            <span>Join the Community</span>
+                            <img class="tweet-btn__img" src="icons/twitter-ic.png" alt="twitter-icon">
+                            <span class="tweet-btn__text">Join the Community</span>
                         </button>
                     </div>
                 </div>
@@ -163,16 +181,22 @@
         </div>
         <footer>
             <div class="contacts row">
-                <div class="contacts-conteiner">
-                    <a href="#" class="contacts-elem">Privacy Policy</a>
-                    <a href="#" class="contacts-elem">Terms of Use</a>
-                    <a href="#" class="contacts-elem">Contact</a>
-                    <p class="contacts-textbox">&copy; 2016 Food Sense, all rights reserved.</p>
+                <div class="contacts__description">
+                    <a class="contacts__link contacts__link-fence" href="#">Privacy Policy</a>
+                    <a class="contacts__link contacts__link-fence" href="#">Terms of Use</a>
+                    <a class="contacts__link contacts__link-fence" href="#">Contact</a>
+                    <p class="contacts__rights">&copy; 2016 Food Sense, all rights reserved.</p>
                 </div>
-                <div class="icons-conteiner">
-                    <img src="icons/twitter-icon.png" alt="twitter-icon">
-                    <img src="icons/facebook-icon.png" alt="fb-icon">
-                    <img src="icons/rss-icon.png" alt="rss-icon">
+                <div class="contacts__social">
+                    <a class="contacts__link" href="#">
+                        <img class="contacts__img" src="icons/twitter-icon.png" alt="twitter-icon">
+                    </a>
+                    <a class="contacts__link" href="#">
+                        <img class="contacts__img" src="icons/facebook-icon.png" alt="fb-icon">
+                    </a>
+                    <a class="contacts__link" href="#">
+                        <img class="contacts__img" src="icons/rss-icon.png" alt="rss-icon">
+                    </a>
                 </div>
             </div>
         </footer>
