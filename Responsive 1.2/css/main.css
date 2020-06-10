@@ -76,7 +76,7 @@ main {
     font-style: italic;
 }
 
-/* стили блока с формой и подпиской */
+    /* стили блока с формой и подпиской */
 
 .subscribe-box {
     margin-top: 31px;
@@ -190,8 +190,12 @@ main {
 .cards__date {
     color: #E5E5E5;
 }
+    
+    /* // */
 
 /* Медиа запросы */
+
+/* От 993px до 1176px */
 
 @media (max-width: 1176px) {
 
@@ -220,6 +224,8 @@ main {
 
 }
 
+/* От 769px до 992px */
+
 @media (max-width: 992px) {
 
     main {
@@ -230,6 +236,8 @@ main {
         align-items: flex-start;
     }
 }
+
+/* От 481px до 768px */
 
 @media (max-width: 768px) {
 
@@ -296,6 +304,8 @@ main {
     }
 
 }
+
+/* До 480px */
 
 @media (max-width: 480px) {
     

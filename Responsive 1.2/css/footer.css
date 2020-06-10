@@ -2,8 +2,8 @@
 
 footer {
     margin-top: 41px;
-    /* border-top: 2px solid #E5E5E5; */
 }
+
 .contacts {
     border-top: 2px solid #E5E5E5;
     font-size: 12px;
@@ -42,6 +42,12 @@ footer {
     color: #E5E5E5;
 }
 
+/* // */
+
+/* Медиа запросы */
+
+/* От 993px до 1176px */
+
 @media (max-width: 1176px) {
 
     .contacts {
@@ -51,6 +57,8 @@ footer {
 
 }
 
+/* От 769px до 992px */
+
 @media (max-width: 992px) {
     
     footer {
@@ -59,10 +67,13 @@ footer {
     
 }
 
+/* До 480px */
+
 @media (max-width: 480px) {
 
     footer {
         margin-top: 50px;
         padding: 0 15px 0 15px;
     }
+    
 }

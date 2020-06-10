@@ -1,3 +1,4 @@
+/* layout и модификаторы */
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -25,7 +26,11 @@ body {
     justify-content: space-between;
 }
 
-/* all 992-1176 */
+ /* // */
+
+/* Медиа запросы */
+
+/* 993px до 1176px */
 
 @media (max-width: 1176px) {
     
@@ -35,7 +40,7 @@ body {
 
 }
 
-/* all 768-992 */
+/* От 769px до 992px */
 
 @media (max-width: 992px) {
     
@@ -48,6 +53,7 @@ body {
      }
 }
 
+/* От 481px до 768px */
 
 @media (max-width: 768px) {
 
@@ -57,6 +63,7 @@ body {
     
 }
 
+/* До 480px */
 
 @media (max-width: 480px) {
 

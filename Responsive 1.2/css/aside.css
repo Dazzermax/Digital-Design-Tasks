@@ -68,6 +68,12 @@ aside {
     margin-right: 5px;
 }
 
+/* // */
+
+/* Медиа запросы */
+
+/* От 769px до 992px */
+
 @media (max-width: 992px) {
     
     aside {
@@ -115,6 +121,8 @@ aside {
 
 }
 
+/* От 481px до 768px */
+
 @media (max-width: 768px) {
 
     .menu-item__img {
@@ -127,6 +135,8 @@ aside {
     }
 
 }
+
+/* До 480px */
 
 @media (max-width: 480px) {
 
