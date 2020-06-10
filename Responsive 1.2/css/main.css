@@ -2,6 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     max-width: 896px;
+    margin-top: 40px;
 }
 
 /* стили слайдера и табов */
@@ -26,7 +27,7 @@ main {
 
 .slider__title {
     font-size: 22px;
-    padding: 12px 21px 12px 19px;
+    padding: 1.6% 5% 2% 3%;
     letter-spacing: 0.01em;
     background-color: #fff;
     left: 0%;
@@ -36,7 +37,7 @@ main {
 .slider__subtitle {
     color: #fff;
     background-color: #000;
-    padding: 13px 35px 13px 24px;
+    padding: 2% 5% 2% 3%;
     left: 0%;
     top: 75%;
 }
@@ -219,15 +220,18 @@ main {
 
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
 
     main {
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
+    .subscribe-box__description {
+        align-items: flex-start;
+    }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     main {
         padding: 0 7px 0 7px;
@@ -241,15 +245,14 @@ main {
 
     .slider__title {
         left: 0%;
-        padding-left: 6px;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.5);
-        top: 76%;
+        top: 80%;
     }
 
     .slider__subtitle {
         width: 100%;
-        top: 89%;
+        top: 90%;
     }
 
     .slider__tabs {
@@ -283,18 +286,18 @@ main {
         max-width: 47%;
     }
 
-    .cards__link {
+    .cards__link-img {
         height: 150px;
     }
 
     .cards__text {
-        padding-right: 15px;
+        padding-right: 10px;
         flex-grow: 1;
     }
 
 }
 
-@media (max-width: 479px) {
+@media (max-width: 480px) {
     
     main {
         padding: 0 0 0 0;
@@ -305,7 +308,7 @@ main {
     }
 
     .slider__subtitle {
-        padding: 4px 0px 3px 4px;
+        padding: 1% 0% 4% 1%;
     }
 
     .mail-form {
@@ -326,7 +329,7 @@ main {
         flex-grow: 0;
     }
 
-    .cards__link {
+    .cards__link-img {
         height: 100%;
     }
 
