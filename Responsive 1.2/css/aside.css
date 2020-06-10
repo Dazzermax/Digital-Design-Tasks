@@ -67,7 +67,7 @@ aside {
     margin-right: 5px;
 }
 
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
     
     aside {
         width: 100%;
@@ -112,4 +112,33 @@ aside {
         display: none;
     }
 
+}
+
+@media (max-width: 767px) {
+
+    .menu-item__img {
+       display: none
+    }
+
+    .aside-menu {
+        width: 76%;
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 479px) {
+
+    aside {
+        flex-direction: column-reverse;
+    }
+
+    .aside-menu {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
 }

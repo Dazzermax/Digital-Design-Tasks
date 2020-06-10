@@ -25,9 +25,9 @@ body {
     justify-content: space-between;
 }
 
-/* Screen 992-1176 */
+/* all 992-1176 */
 
-@media screen and (max-width: 1176px) {
+@media (max-width: 1176px) {
     
     .wrapper {
        max-width: 896px;
@@ -35,9 +35,9 @@ body {
 
 }
 
-/* Screen 768-992 */
+/* all 768-992 */
 
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
     
     .wrapper {
         max-width: 712px;
@@ -50,10 +50,19 @@ body {
 }
 
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
 
     .wrapper {
         max-width: 560px;;
     }
     
+}
+
+
+@media (max-width: 479px) {
+
+    .wrapper {
+        max-width: 100%;
+    }
+
 }
