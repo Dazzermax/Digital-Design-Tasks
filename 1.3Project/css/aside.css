@@ -11,7 +11,14 @@ aside {
     text-align: center;
 }
 
+.aside-menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .menu-item {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 31px;
 }
@@ -27,6 +34,11 @@ aside {
 .menu-item__title {
     color: #34ACA7;
     font-style: italic;
+}
+
+.tweet-block {
+    display: flex;
+    flex-direction: column;
 }
 
 .tweet-block__title {
@@ -45,6 +57,8 @@ aside {
 }
 
 .tweet-btn {
+    display: flex;
+    flex-direction: row;
     background: #FFFFFF;
     margin-top: 10px;
     align-items: center;
@@ -66,6 +80,11 @@ aside {
 
 .tweet-btn__img {
     margin-right: 5px;
+}
+
+.tweets {
+    display: flex;
+    flex-direction: column;
 }
 
 /* // */

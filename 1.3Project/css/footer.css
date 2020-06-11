@@ -5,6 +5,8 @@ footer {
 }
 
 .contacts {
+    display: flex;
+    flex-direction: row;
     border-top: 2px solid #E5E5E5;
     font-size: 12px;
     padding: 24px 8px 37px;

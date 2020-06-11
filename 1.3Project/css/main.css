@@ -8,6 +8,10 @@ main {
 /* стили слайдера и табов */
 
     /* слайдер */
+.slider {
+    display: flex;
+    flex-direction: column;
+}
 
 .slider__header {
     height: 445px;
@@ -44,6 +48,11 @@ main {
 
     /* табы */
 
+.slider__tabs {
+    display: flex;
+    flex-direction: row;
+}
+
 .tab__link {
     flex: 1;
 }
@@ -79,6 +88,8 @@ main {
     /* стили блока с формой и подпиской */
 
 .subscribe-box {
+    display: flex;
+    flex-direction: row;
     margin-top: 31px;
     border-top: 1px dashed #E5E5E5;
     border-bottom: 1px dashed #E5E5E5;
@@ -92,12 +103,19 @@ main {
 }
 
 .subscribe-box__description {
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
 .subscribe-box__text {
     font-style: italic;
     width: 87%
+}
+
+.mail-form {
+    display: flex;
+    flex-direction: row;
 }
 
 .mail-form__input {
@@ -146,6 +164,8 @@ main {
 /* стили карточек со статьями */
 
 .cards {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -157,7 +177,6 @@ main {
 
 .cards__img {
     width: 100%;
-    height: 100%;
     border: 2px solid #E5E5E5;  /* картинка изначально с белыми краями*/ 
 }
 
