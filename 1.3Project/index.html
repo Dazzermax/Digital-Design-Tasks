@@ -3,12 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="build/css/style.css">
     <title>Task 1.2 Responsive</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="wrapper__main-aside"> 
+            <aside>
+                <div class="logo">
+                    <a class="logo__link" href="#" >
+                        <img class="logo__img" src="icons/icon-logo.png" alt="food-sense" >
+                    </a>
+                </div>
+                <nav class="aside-menu">
+                    <a class="menu-item__link" href="#">
+                        <div class="menu-item">
+                            <img class="menu-item__img" src="icons/food-icon.png" alt="food-icon">
+                            <span class="menu-item__title">Tastemakers</span>
+                        </div>
+                    </a>
+                    <a class="menu-item__link" href="#">
+                        <div class="menu-item">
+                            <img class="menu-item__img" src="icons/blog-icon.png" alt="blog-icon">
+                            <span class="menu-item__title">Blog</span>
+                        </div>
+                    </a>
+                    <a class="menu-item__link" href="#">
+                        <div class="menu-item">
+                            <img class="menu-item__img" src="icons/a-list-icon.png" alt="a-list-icon">
+                            <span class="menu-item__title">The A-List</span>
+                        </div>
+                    </a>
+                    <a class="menu-item__link" href="#">
+                        <div class="menu-item">
+                            <img class="menu-item__img" src="icons/camera-icon.png" alt="camera-icon">
+                            <span class="menu-item__title">Contribure</span>
+                        </div>
+                    </a>
+                    <a class="menu-item__link" href="#">
+                        <div class="menu-item">
+                            <img class="menu-item__img" src="icons/about-icon.png" alt="about-icon">
+                            <span class="menu-item__title">About</span>
+                        </div>
+                    </a>
+                </nav>
+                <div class="tweets">
+                    <div class="tweet-block">
+                        <span class="tweet-block__title">Latest tweet</span>
+                        <button class="tweet-btn">
+                            <img class="tweet-btn__img" src="icons/twitter-ic.png" alt="twitter-icon">
+                            <span class="tweet-btn__text" >Join the Conversation</span>
+                        </button>
+                    </div>
+                    <div class="tweet-block">
+                        <span class="tweet-block__title">Let’s be friends!</span>
+                        <p class="tweet-block__text">
+                            For weekly finds, community recommendations, and more, like us on Facebook.
+                        </p>
+                        <button class="tweet-btn">
+                            <img class="tweet-btn__img" src="icons/twitter-ic.png" alt="twitter-icon">
+                            <span class="tweet-btn__text">Join the Community</span>
+                        </button>
+                    </div>
+                </div>
+            </aside>
             <main>
                 <div class="slider">
                     <div class="slider__header">
@@ -86,7 +145,7 @@
                     </article>
                     <article class="cards__content">
                         <a class="cards__link cards__link-img" href="#" title="Read...">
-                            <img class="cards__img" src="img/image(3).png" alt="Hands with greens">
+                            <img class="cards__img" src="img/image(3).png" alt="Greens">
                         </a>
                         <div class="cards__text">
                             <a class="cards__link" href="#">
@@ -95,7 +154,7 @@
                             <p class="cards__description">If I could curate a cookbook for you, this would be it.</p>
                         </div>
                         <div class="cards__footer">
-                            <time class="cards__date" datetime="2012-05-23">May 23, 2012 /</time>
+                            <time class="cards__date" datetime="2012-05-23">May 23, 2012 / /</time>
                             <a class="cards__link cards__link-undeline" href="#">Read...</a>
                         </div>
                     </article>
@@ -116,64 +175,6 @@
                     </article>
                 </section>
             </main>
-            <aside>
-                <div class="logo">
-                    <a class="logo__link" href="#" >
-                        <img class="logo__img" src="icons/icon-logo.png" alt="food-sense" >
-                    </a>
-                </div>
-                <nav class="aside-menu">
-                    <a class="menu-item__link" href="#">
-                        <div class="menu-item">
-                            <img class="menu-item__img" src="icons/food-icon.png" alt="food-icon">
-                            <span class="menu-item__title">Tastemakers</span>
-                        </div>
-                    </a>
-                    <a class="menu-item__link" href="#">
-                        <div class="menu-item">
-                            <img class="menu-item__img" src="icons/blog-icon.png" alt="blog-icon">
-                            <span class="menu-item__title">Blog</span>
-                        </div>
-                    </a>
-                    <a class="menu-item__link" href="#">
-                        <div class="menu-item">
-                            <img class="menu-item__img" src="icons/a-list-icon.png" alt="a-list-icon">
-                            <span class="menu-item__title">The A-List</span>
-                        </div>
-                    </a>
-                    <a class="menu-item__link" href="#">
-                        <div class="menu-item">
-                            <img class="menu-item__img" src="icons/camera-icon.png" alt="camera-icon">
-                            <span class="menu-item__title">Contribure</span>
-                        </div>
-                    </a>
-                    <a class="menu-item__link" href="#">
-                        <div class="menu-item">
-                            <img class="menu-item__img" src="icons/about-icon.png" alt="about-icon">
-                            <span class="menu-item__title">About</span>
-                        </div>
-                    </a>
-                </nav>
-                <div class="tweets">
-                    <div class="tweet-block">
-                        <span class="tweet-block__title">Latest tweet</span>
-                        <button class="tweet-btn">
-                            <img class="tweet-btn__img" src="icons/twitter-ic.png" alt="twitter-icon">
-                            <span class="tweet-btn__text" >Join the Conversation</span>
-                        </button>
-                    </div>
-                    <div class="tweet-block">
-                        <span class="tweet-block__title">Let’s be friends!</span>
-                        <p class="tweet-block__text">
-                            For weekly finds, community recommendations, and more, like us on Facebook.
-                        </p>
-                        <button class="tweet-btn">
-                            <img class="tweet-btn__img" src="icons/twitter-ic.png" alt="twitter-icon">
-                            <span class="tweet-btn__text">Join the Community</span>
-                        </button>
-                    </div>
-                </div>
-            </aside>
         </div>
         <footer>
             <div class="contacts">

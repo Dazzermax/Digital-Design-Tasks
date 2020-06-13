@@ -165,12 +165,13 @@ main {
 
 .cards {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .cards__content {
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
     max-width: 23%;
 }
@@ -313,10 +314,6 @@ main {
         max-width: 47%;
     }
 
-    .cards__link-img {
-        height: 150px;
-    }
-
     .cards__text {
         padding-right: 10px;
         flex-grow: 1;
@@ -351,19 +348,11 @@ main {
     }
 
     .cards__content {
-        max-width: 80%;
+        min-width: 80%;
     }
 
     .cards__text {
         flex-grow: 0;
-    }
-
-    .cards__link-img {
-        height: 100%;
-    }
-
-    .cards__img {
-        height: 80%;
     }
 
 }
