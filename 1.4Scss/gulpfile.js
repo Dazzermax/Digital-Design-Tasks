@@ -2,17 +2,22 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	sourcemaps = require('gulp-sourcemaps'),
 	browserSync = require('browser-sync').create(),
-	concatCss = require('gulp-concat-css');
+    sass = require('gulp-sass');
 
 
 function css_style(done) {
 
 	gulp.src('./css/**/*.css')
 		.pipe(sourcemaps.init())
-		.pipe(concatCss("style.css"))
+		.pipe(sass({
+			errorLogToConsole: true,
+			outputStyle: 'compressed' // 
+		}))
+		.pipe(rename({suffix: '.min'}))
+		.on('error', console.error.bind(console))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('build/css'))
-		.pipe(browserSync.stream())
+		.pipe(gulp.dest('./css'))
+		.pipe(browserSync.stream());
 
 	done();
 }
@@ -40,4 +45,4 @@ function watchFile() {
 	gulp.watch('./**/*.html', browserReload);
 }
 
-gulp.task('default', gulp.parallel(sync, watchFile))
+gulp.task('default', gulp.parallel(watchFile, sync));
