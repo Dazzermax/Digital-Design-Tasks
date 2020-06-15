@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
 function css_style(done) {
 
-	gulp.src('./scss/**/*.scss')
+	gulp.src('app/scss/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			errorLogToConsole: true,
@@ -16,7 +16,7 @@ function css_style(done) {
 		.pipe(rename({suffix: '.min'}))
 		.on('error', console.error.bind(console))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./build/css'))
+		.pipe(gulp.dest('app/build/css'))
 		.pipe(browserSync.stream());
 
 	done();
@@ -26,7 +26,7 @@ function sync(done) {
 
 	browserSync.init({
 		server: {
-			baseDir: "./"
+			baseDir: "app/"
 		},
 		port: 3000,
 		notify: false
@@ -41,8 +41,8 @@ function browserReload(done) {
 }
 
 function watchFile() {
-	gulp.watch('./scss/**/*.scss', css_style);
-	gulp.watch('./**/*.html', browserReload);
+	gulp.watch('app/scss/**/*.scss', css_style);
+	gulp.watch('app/**/*.html', browserReload);
 }
 
 gulp.task('default', gulp.parallel(watchFile, sync));
