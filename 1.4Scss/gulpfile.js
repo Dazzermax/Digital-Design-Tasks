@@ -6,28 +6,37 @@ var gulp = require('gulp'),
 
 
 function css_style(done) {
-	gulp.src('css/**/*.css')
+
+	gulp.src('./css/**/*.css')
+		.pipe(sourcemaps.init())
 		.pipe(concatCss("style.css"))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('build/css'))
 		.pipe(browserSync.stream())
+
 	done();
 }
 
 function sync(done) {
+
 	browserSync.init({
 		server: {
 			baseDir: "./"
 		},
-		port: 3000
+		port: 3000,
+		notify: false
 	})
+
+	done();
 }
 
 function browserReload(done) {
-	browserSync.reload()
+	browserSync.reload();
+	done();
 }
 
 function watchFile() {
-	gulp.watch('css/**/*.css', css_style);
+	gulp.watch('./css/**/*.css', css_style);
 	gulp.watch('./**/*.html', browserReload);
 }
 
