@@ -1,13 +1,12 @@
-# Task 1 3 Project.
+# Task 1.4 Scss.
 
-Используя [код](https://github.com/Dazzermax/Digital-Design-Tasks/tree/1.2responsive) из задания 1.2 добавлен в проект сборщик.
+Используя [код](https://github.com/Dazzermax/Digital-Design-Tasks/tree/1.3project) из задания 1.3 добавлен в проект препроцессор SCSS.
 
 Использовлись следующие технологии: 
 
-> NPM / Gulp
+> NPM / Gulp / SCSS
 
-Ограничения:
-* Не использовать Webpack
+
 
 
 
