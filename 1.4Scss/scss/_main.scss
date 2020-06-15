@@ -7,7 +7,12 @@ main {
 
 /* стили слайдера и табов */
 
+/////////////////
+
     /* слайдер */
+
+/////////////////
+
 .slider {
     display: flex;
     flex-direction: column;
@@ -46,7 +51,11 @@ main {
     top: 75%;
 }
 
+/////////////////
+
     /* табы */
+
+/////////////////
 
 .slider__tabs {
     display: flex;
@@ -85,7 +94,11 @@ main {
     font-style: italic;
 }
 
-    /* стили блока с формой и подпиской */
+/////////////////////////////////////
+
+/* стили блока с формой и подпиской */
+
+////////////////////////////////////
 
 .subscribe-box {
     display: flex;
@@ -161,7 +174,11 @@ main {
     border-color: rgb(65, 60, 60);
 }
 
+////////////////////////////////
+
 /* стили карточек со статьями */
+
+///////////////////////////////
 
 .cards {
     display: flex;
@@ -178,7 +195,7 @@ main {
 
 .cards__img {
     width: 100%;
-    border: 2px solid #E5E5E5;  /* картинка изначально с белыми краями*/ 
+    border: 2px solid #E5E5E5;   
 }
 
 .cards__text {
@@ -211,148 +228,3 @@ main {
     color: #E5E5E5;
 }
     
-    /* // */
-
-/* Медиа запросы */
-
-/* От 993px до 1176px */
-
-@media (max-width: 1176px) {
-
-    main {
-        max-width: 712px;
-    }
-
-    .tab__link:not(:last-child) {
-        margin-right: 0;
-        border-right: 1px solid #D6E6E6;
-    }
-
-    .tab {
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 9px;
-    }
-
-    .tab__title {
-        font-size: 14px;
-    }
-
-    .tab__subtitle {
-        display: none;
-    }
-
-}
-
-/* От 769px до 992px */
-
-@media (max-width: 992px) {
-
-    main {
-        margin-top: 40px;
-    }
-
-    .subscribe-box__description {
-        align-items: flex-start;
-    }
-}
-
-/* От 481px до 768px */
-
-@media (max-width: 768px) {
-
-    main {
-        padding: 0 7px 0 7px;
-    }
-
-    /* слайдер */
-
-    .slider__header {
-        height: 353px;
-    }
-
-    .slider__title {
-        left: 0%;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.5);
-        top: 80%;
-    }
-
-    .slider__subtitle {
-        width: 100%;
-        top: 90%;
-    }
-
-    .slider__tabs {
-        display: none;
-    }
-
-    /* стили блока с формой и подпиской */
-
-    .subscribe-box {
-        flex-direction: column;
-        align-items: stretch;
-        padding-bottom: 15px;
-    }
-
-    .mail-form {
-        margin-top: 20px;
-    }
-
-    .mail-form__input {
-        flex: 1;
-        margin-right: 36px;
-    }
-
-    /* стили карточек со статьями */
-
-    .cards {
-        align-items: stretch;
-    }
-
-    .cards__content {
-        max-width: 47%;
-    }
-
-    .cards__text {
-        padding-right: 10px;
-        flex-grow: 1;
-    }
-
-}
-
-/* До 480px */
-
-@media (max-width: 480px) {
-    
-    main {
-        padding: 0 0 0 0;
-    }
-
-    .slider__header {
-        height: 373px;
-    }
-
-    .slider__subtitle {
-        padding: 1% 0% 4% 1%;
-    }
-
-    .mail-form {
-        width: 80%;
-        margin-right: 50px;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cards__content {
-        min-width: 80%;
-    }
-
-    .cards__text {
-        flex-grow: 0;
-    }
-
-}

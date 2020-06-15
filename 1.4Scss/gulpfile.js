@@ -7,16 +7,16 @@ var gulp = require('gulp'),
 
 function css_style(done) {
 
-	gulp.src('./css/**/*.css')
+	gulp.src('./scss/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			errorLogToConsole: true,
-			outputStyle: 'compressed' // 
+			outputStyle: 'compressed'  
 		}))
 		.pipe(rename({suffix: '.min'}))
 		.on('error', console.error.bind(console))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./css'))
+		.pipe(gulp.dest('./build/css'))
 		.pipe(browserSync.stream());
 
 	done();
@@ -41,7 +41,7 @@ function browserReload(done) {
 }
 
 function watchFile() {
-	gulp.watch('./css/**/*.css', css_style);
+	gulp.watch('./scss/**/*.scss', css_style);
 	gulp.watch('./**/*.html', browserReload);
 }
 
