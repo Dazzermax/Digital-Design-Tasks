@@ -14,30 +14,31 @@
         max-width: 712px;
     }
 
-    .tab__link:not(:last-child) {
-        margin-right: 0;
-        border-right: 1px solid #D6E6E6;
-    }
+    // Табы
 
     .tab {
         text-align: center;
         padding-top: 10px;
         padding-bottom: 9px;
-    }
 
-    .tab__title {
-        font-size: 14px;
-    }
+        &:not(:last-child) {
+            margin-right: 0;
+            border-right: 1px solid #D6E6E6;
+        }
 
-    .tab__subtitle {
-        display: none;
+        &__title {
+            font-size: 14px;
+        }
+
+        &__subtitle {
+            display: none;
+        }
     }
 
     // Footer 
 
     .contacts {
-        padding-right: 0;
-        padding-left: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
-
 }

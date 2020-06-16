@@ -2,13 +2,13 @@
 
 @media (max-width: 480px) {
 
-    //Base 
+    // Base 
 
     .wrapper {
         max-width: 100%;
     }
 
-    //Aside
+    // Aside
 
     aside {
         flex-direction: column-reverse;
@@ -27,8 +27,10 @@
     // Main
 
     main {
-        padding: 0 0 0 0;
+        padding: 0;
     }
+
+    // Слайдер
 
     .slider__header {
         height: 373px;
@@ -38,6 +40,8 @@
         padding: 1% 0% 4% 1%;
     }
 
+    // Блок с формой и подпиской
+
     .mail-form {
         width: 80%;
         margin-right: 50px;
@@ -46,17 +50,17 @@
     .cards {
         flex-direction: column;
         align-items: center;
+
+        &__content {
+            min-width: 80%;
+        }
+
+        &__text {
+            flex-grow: 0;
+        }
     }
 
-    .cards__content {
-        min-width: 80%;
-    }
-
-    .cards__text {
-        flex-grow: 0;
-    }
-
-    // footer
+    // Footer
 
     footer {
         margin-top: 50px;

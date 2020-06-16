@@ -15,22 +15,22 @@ aside {
     display: flex;
     flex-direction: column;
 
-    .menu-item {
+    &__item {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-bottom: 31px;
     
         &:hover {border-right: 3px solid $link-color;}
-    
-        &__img {
-            margin-right: 15px;
-        }
-    
-        &__title {
-            color: $link-color;
-            font-style: italic;
-        }
+    }
+
+    &__img {
+        margin-right: 15px;
+    }
+
+    &__title {
+        color: $link-color;
+        font-style: italic;
     }
 }
 

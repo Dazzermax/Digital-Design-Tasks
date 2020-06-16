@@ -1,7 +1,7 @@
 /* footer стили */
 
 footer {
-    margin-top: 41px;
+    margin-top: 40px;
 }
 
 .contacts {
@@ -12,35 +12,39 @@ footer {
     padding: 24px 8px 37px;
     justify-content: space-between;
     align-items: center;
+
+    &__link-fence {
+        color: $link-color;
+        position: relative;
+        margin-right: 7px;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:not(:last-of-type)::after {
+            position: absolute;
+            content: '';
+            display: block;
+            height: 12px;
+            width: 1px;
+            top: 10%;
+            right: -6px;
+            background-color: #E5E5E5;
+        }
+    }
+
+    &__rights {
+        margin-top: 3px;
+        color: #E5E5E5;
+    }
+
+    &__link:not(:last-child) {
+        margin-right: 8px;
+    }
+   
 }
 
-.contacts__link:not(:last-child) {
-    margin-right: 8px;
-}
 
-.contacts__link-fence {
-    color: $link-color;
-    position: relative;
-    margin-right: 7px;
-}
 
-.contacts__link-fence:hover {
-    text-decoration: underline;
-}
-
-.contacts__link-fence:not(:last-of-type)::after {
-    position: absolute;
-    content: '';
-    display: block;
-    height: 12px;
-    width: 1px;
-    top: 10%;
-    right: -6px;
-    background-color: #E5E5E5;
-}
-
-.contacts__rights {
-    margin-top: 3px;
-    color: #E5E5E5;
-}
 

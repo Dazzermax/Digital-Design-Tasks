@@ -10,21 +10,22 @@
     
     // Aside
 
-    .menu-item__img {
-        display: none
-     }
- 
-     .aside-menu {
-         width: 76%;
-         justify-content: space-between;
-     }
+    .aside-menu {
+        width: 76%;
+        justify-content: space-between;
+
+        &__img {
+            display: none
+        }
+    }
+    
 
     //  Main
     main {
         padding: 0 7px 0 7px;
     }
 
-    /* слайдер */
+    // Слайдер
 
     .slider__header {
         height: 353px;
@@ -46,7 +47,7 @@
         display: none;
     }
 
-    /* стили блока с формой и подпиской */
+    // Стили блока с формой и подпиской
 
     .subscribe-box {
         flex-direction: column;
@@ -56,26 +57,26 @@
 
     .mail-form {
         margin-top: 20px;
+
+        &__input {
+            flex: 1;
+            margin-right: 36px;
+        }
     }
 
-    .mail-form__input {
-        flex: 1;
-        margin-right: 36px;
-    }
-
-    /* стили карточек со статьями */
+    // Стили карточек со статьями 
 
     .cards {
         align-items: stretch;
-    }
 
-    .cards__content {
-        max-width: 47%;
-    }
+        &__content {
+            max-width: 47%;
+        }
 
-    .cards__text {
-        padding-right: 10px;
-        flex-grow: 1;
+        &__text {
+            padding-right: 10px;
+            flex-grow: 1;
+        }
     }
-
+  
 }
