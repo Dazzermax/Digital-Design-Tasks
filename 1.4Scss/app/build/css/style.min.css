@@ -286,6 +286,32 @@ footer {
     color: #E5E5E5; }
   .contacts__link:not(:last-child) {
     margin-right: 8px; }
+  .contacts__social {
+    display: flex; }
+
+.facebook-wrapper {
+  height: 32px;
+  width: 32px;
+  background-size: cover;
+  background-image: url(../../icons/footer-icons/facebook.png); }
+  .facebook-wrapper:hover {
+    background-image: url(../../icons/footer-icons/facebook-hover.png); }
+
+.twitter-wrapper {
+  height: 32px;
+  width: 32px;
+  background-size: cover;
+  background-image: url(../../icons/footer-icons/twitter.png); }
+  .twitter-wrapper:hover {
+    background-image: url(../../icons/footer-icons/twitter-hover.png); }
+
+.rss-wrapper {
+  height: 32px;
+  width: 32px;
+  background-size: cover;
+  background-image: url(../../icons/footer-icons/rss.png); }
+  .rss-wrapper:hover {
+    background-image: url(../../icons/footer-icons/rss-hover.png); }
 
 /* 993px до 1176px */
 @media (max-width: 1176px) {

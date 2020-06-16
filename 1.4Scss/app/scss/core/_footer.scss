@@ -39,8 +39,22 @@ footer {
     &__link:not(:last-child) {
         margin-right: 8px;
     }
+
+    &__social {
+        display: flex;
+    }
 }
 
+@each $name in facebook, twitter, rss {
+    .#{$name}-wrapper{
+        height: 32px;
+        width: 32px;
+        background-size: cover;
+        background-image: url(../../icons/footer-icons/#{$name}.png);
 
-
+        &:hover {
+            background-image: url(../../icons/footer-icons/#{$name}-hover.png); 
+        }
+    }
+}
 
