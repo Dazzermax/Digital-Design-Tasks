@@ -2,25 +2,31 @@
 //// Переменные 
 
 /// Цвета
-$base-color: #34ACA7; // цвет всех ссылок
 
-$tab-bg:#EFF8F7; // бэкграунд табов
+// цвет всех ссылок
+$links-color: #34ACA7;
 
-$tab-active: #D9EFEC; //hover / active эффект.
+// бэкграунд табов
+$tab-bg:#EFF8F7; 
 
-$sub-text: #E5E5E5; // цвет подписи дат, права в footer.
+//hover / active эффект.
+$tab-active: #D9EFEC; 
 
+// цвет подписи дат, права в footer
+$sub-text: #E5E5E5; 
 
 //// Миксины
 
 // Миксин для псевдоэлементов:
-@mixin pseudo($display: block, $pos: absolute, $content: ''){ 
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
     content: $content;
     display: $display;
     position: $pos;
-}
+  }
 
 // Миксины для флексов:
+
 @mixin flex-row {
     display: flex;
     flex-direction: row;
@@ -30,9 +36,6 @@ $sub-text: #E5E5E5; // цвет подписи дат, права в footer.
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;

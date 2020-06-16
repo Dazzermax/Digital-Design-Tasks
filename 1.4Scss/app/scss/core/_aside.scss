@@ -19,7 +19,7 @@ aside {
         margin-bottom: 31px;
     
         &:hover {
-            border-right: 3px solid $base-color;
+            border-right: 3px solid $links-color;
         }
     }
 
@@ -28,7 +28,7 @@ aside {
     }
 
     &__title {
-        color: $base-color;
+        color: $links-color;
         font-style: italic;
     }
 }
@@ -61,7 +61,7 @@ aside {
     background: #FFFFFF;
     margin-top: 10px;
     align-items: center;
-    color: $base-color;
+    color: $links-color;
     border: 1px solid #E5E5E5;
     font-size: 10px;
     font-style: italic;
@@ -69,7 +69,7 @@ aside {
     padding: 7px 0px 7px 7px;
 
     &:hover {
-        border-color: $base-color;
+        border-color: $links-color;
     }
 
     &:active {
