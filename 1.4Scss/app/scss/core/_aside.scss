@@ -3,8 +3,7 @@
 aside {
     margin-top: 40px;
     width: 140px;
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
 }
 
 .logo {
@@ -12,16 +11,16 @@ aside {
 }
 
 .aside-menu {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
 
     &__item {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         align-items: center;
         margin-bottom: 31px;
     
-        &:hover {border-right: 3px solid $link-color;}
+        &:hover {
+            border-right: 3px solid $base-color;
+        }
     }
 
     &__img {
@@ -29,19 +28,17 @@ aside {
     }
 
     &__title {
-        color: $link-color;
+        color: $base-color;
         font-style: italic;
     }
 }
 
 .tweets {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
 }
 
 .tweet-block {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
 
     &__title {
         margin-top: 5px;
@@ -60,12 +57,11 @@ aside {
 }
 
 .tweet-btn {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     background: #FFFFFF;
     margin-top: 10px;
     align-items: center;
-    color: $link-color;
+    color: $base-color;
     border: 1px solid #E5E5E5;
     font-size: 10px;
     font-style: italic;
@@ -73,7 +69,7 @@ aside {
     padding: 7px 0px 7px 7px;
 
     &:hover {
-        border-color: $link-color;
+        border-color: $base-color;
     }
 
     &:active {
@@ -83,5 +79,4 @@ aside {
     &__img {
         margin-right: 5px;
     }
-
 }

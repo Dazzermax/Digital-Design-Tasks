@@ -1,23 +1,49 @@
+
+//// Переменные 
+
+/// Цвета
+$base-color: #34ACA7; // цвет всех ссылок
+
+$tab-bg:#EFF8F7; // бэкграунд табов
+
+$tab-active: #D9EFEC; //hover / active эффект.
+
+$sub-text: #E5E5E5; // цвет подписи дат, права в footer.
+
+
+//// Миксины
+
+// Миксин для псевдоэлементов:
+@mixin pseudo($display: block, $pos: absolute, $content: ''){ 
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Миксины для флексов:
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
     
-    display: flex;
+    @include flex-col;
     max-width: 1080px;
     margin: 0 auto 0;
-    flex-direction: column;
 
     &__main-aside {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         justify-content: space-between; 
     }
 
 }
-
-
-// Переменные 
-
-$link-color: #34ACA7;

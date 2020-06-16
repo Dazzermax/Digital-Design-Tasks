@@ -46,9 +46,9 @@ body {
 
 .wrapper {
   display: flex;
+  flex-direction: column;
   max-width: 1080px;
-  margin: 0 auto 0;
-  flex-direction: column; }
+  margin: 0 auto 0; }
   .wrapper__main-aside {
     display: flex;
     flex-direction: row;
@@ -165,7 +165,7 @@ main {
   .tab:not(:last-child) {
     margin-right: 1px; }
   .tab:hover {
-    background: #D9EFEC; }
+    background-color: #D9EFEC; }
   .tab-active {
     background-color: #D9EFEC; }
   .tab__title {
@@ -226,6 +226,7 @@ main {
 /* стили карточек со статьями */
 .cards {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap; }
   .cards__content {
@@ -272,9 +273,9 @@ footer {
     .contacts__link-fence:hover {
       text-decoration: underline; }
     .contacts__link-fence:not(:last-of-type)::after {
-      position: absolute;
-      content: '';
+      content: "";
       display: block;
+      position: absolute;
       height: 12px;
       width: 1px;
       top: 10%;
@@ -327,11 +328,11 @@ footer {
       flex-direction: column;
       margin-bottom: 0; }
       .aside-menu__item:hover::after {
+        content: "";
+        display: block;
         position: absolute;
         top: 102%;
         left: 0%;
-        content: '';
-        display: block;
         height: 3px;
         width: 100%;
         background-color: #34ACA7; }

@@ -5,8 +5,7 @@ footer {
 }
 
 .contacts {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     border-top: 2px solid #E5E5E5;
     font-size: 12px;
     padding: 24px 8px 37px;
@@ -14,7 +13,7 @@ footer {
     align-items: center;
 
     &__link-fence {
-        color: $link-color;
+        color: $base-color;
         position: relative;
         margin-right: 7px;
         
@@ -23,9 +22,7 @@ footer {
         }
 
         &:not(:last-of-type)::after {
-            position: absolute;
-            content: '';
-            display: block;
+            @include pseudo;
             height: 12px;
             width: 1px;
             top: 10%;
@@ -36,13 +33,12 @@ footer {
 
     &__rights {
         margin-top: 3px;
-        color: #E5E5E5;
+        color: $sub-text;
     }
 
     &__link:not(:last-child) {
         margin-right: 8px;
     }
-   
 }
 
 

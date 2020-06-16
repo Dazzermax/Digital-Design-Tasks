@@ -1,6 +1,5 @@
 main {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     max-width: 896px;
     margin-top: 40px;
 }
@@ -14,8 +13,7 @@ main {
 /////////////////
 
 .slider {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
 
     &__header {
         height: 445px;
@@ -51,8 +49,7 @@ main {
     }
 
     &__tabs {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
     }
 }
 
@@ -65,8 +62,8 @@ main {
 
 .tab {
     flex: 1;
-    background: #EFF8F7;
-    color: $link-color;
+    background: $tab-bg;
+    color: $base-color;
     padding: 26px 19px 22px 19px;
 
     &:not(:last-child) {
@@ -74,11 +71,11 @@ main {
     }
 
     &:hover {
-        background: #D9EFEC;
+        background-color: $tab-active;
     }
 
     &-active {
-        background-color: #D9EFEC;
+        background-color: $tab-active;
     }
 
     &__title {
@@ -100,8 +97,7 @@ main {
 ////////////////////////////////////
 
 .subscribe-box {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     margin-top: 31px;
     border-top: 1px dashed #E5E5E5;
     border-bottom: 1px dashed #E5E5E5;
@@ -114,8 +110,7 @@ main {
     }
 
     &__description {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         align-items: center;
     }
 
@@ -126,8 +121,7 @@ main {
 }
 
 .mail-form {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
 
     &__input {
         border: 1px solid #E5E5E5;
@@ -175,13 +169,12 @@ main {
 ///////////////////////////////
 
 .cards {
-    display: flex;
+    @include flex-row;
     justify-content: space-between;
     flex-wrap: wrap;
 
     &__content {
-        display: flex;
-        flex-direction: column;
+        @include flex-col;
         margin-top: 30px;
         max-width: 23%;
     }
@@ -197,7 +190,7 @@ main {
 
     &__title {
         font-size: 16px;
-        color: $link-color;
+        color: $base-color;
     }
 
     &__description {
@@ -210,7 +203,7 @@ main {
     }
 
     &__link {
-        color: $link-color;
+        color: $base-color;
 
         &-underline:hover {
             text-decoration: underline;
@@ -218,7 +211,7 @@ main {
     }
 
     &__date {
-        color: #E5E5E5;
+        color: $sub-text;
     }
 }
 

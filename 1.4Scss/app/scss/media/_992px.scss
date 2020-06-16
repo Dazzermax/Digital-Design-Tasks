@@ -32,14 +32,12 @@
             margin-bottom: 0;
 
             &:hover::after {
-                position: absolute;
+                @include pseudo;
                 top: 102%;
                 left: 0%;
-                content: '';
-                display: block;
                 height: 3px;
                 width: 100%;
-                background-color: #34ACA7;
+                background-color: $base-color;
             }
 
             &:hover {
