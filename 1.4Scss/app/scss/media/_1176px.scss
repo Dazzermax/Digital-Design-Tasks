@@ -1,0 +1,43 @@
+/* 993px до 1176px */ 
+
+@media (max-width: 1176px) {
+    
+    // Base
+
+    .wrapper {
+       max-width: 896px;
+    }
+
+    // Main
+
+    main {
+        max-width: 712px;
+    }
+
+    .tab__link:not(:last-child) {
+        margin-right: 0;
+        border-right: 1px solid #D6E6E6;
+    }
+
+    .tab {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 9px;
+    }
+
+    .tab__title {
+        font-size: 14px;
+    }
+
+    .tab__subtitle {
+        display: none;
+    }
+
+    // Footer 
+
+    .contacts {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+}

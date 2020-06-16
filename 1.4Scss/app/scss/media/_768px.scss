@@ -1,0 +1,81 @@
+/* От 481px до 768px  */
+
+@media (max-width: 768px) {
+
+    // Base
+
+    .wrapper {
+        max-width: 560px;;
+    }
+    
+    // Aside
+
+    .menu-item__img {
+        display: none
+     }
+ 
+     .aside-menu {
+         width: 76%;
+         justify-content: space-between;
+     }
+
+    //  Main
+    main {
+        padding: 0 7px 0 7px;
+    }
+
+    /* слайдер */
+
+    .slider__header {
+        height: 353px;
+    }
+
+    .slider__title {
+        left: 0%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        top: 80%;
+    }
+
+    .slider__subtitle {
+        width: 100%;
+        top: 90%;
+    }
+
+    .slider__tabs {
+        display: none;
+    }
+
+    /* стили блока с формой и подпиской */
+
+    .subscribe-box {
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 15px;
+    }
+
+    .mail-form {
+        margin-top: 20px;
+    }
+
+    .mail-form__input {
+        flex: 1;
+        margin-right: 36px;
+    }
+
+    /* стили карточек со статьями */
+
+    .cards {
+        align-items: stretch;
+    }
+
+    .cards__content {
+        max-width: 47%;
+    }
+
+    .cards__text {
+        padding-right: 10px;
+        flex-grow: 1;
+    }
+
+}

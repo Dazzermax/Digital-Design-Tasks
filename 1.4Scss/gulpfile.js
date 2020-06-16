@@ -11,7 +11,7 @@ function css_style(done) {
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			errorLogToConsole: true,
-			outputStyle: 'compressed'  
+			// outputStyle: 'compressed'  
 		}))
 		.pipe(rename({suffix: '.min'}))
 		.on('error', console.error.bind(console))

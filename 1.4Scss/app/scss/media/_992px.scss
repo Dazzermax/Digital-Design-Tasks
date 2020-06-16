@@ -1,0 +1,76 @@
+/* От 769px до 992px  */
+
+@media (max-width: 992px) {
+    
+    // Base
+
+    .wrapper {
+        max-width: 712px;
+     }
+
+     .wrapper__main-aside {
+        flex-direction: column;
+     }
+
+    //  Aside
+
+    aside {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .aside-menu {
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-item {
+        position: relative;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .menu-item:hover::after {
+        position: absolute;
+        top: 102%;
+        left: 0%;
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #34ACA7;
+    }
+
+    .menu-item:hover {
+        border-right: 0;
+    }
+
+    .menu-item__img {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .tweets {
+        display: none;
+    }
+
+    // Main
+
+    main {
+        margin-top: 40px;
+    }
+
+    .subscribe-box__description {
+        align-items: flex-start;
+    }
+
+    // Footer
+
+    footer {
+        margin-top: 100px;
+    }
+
+}
