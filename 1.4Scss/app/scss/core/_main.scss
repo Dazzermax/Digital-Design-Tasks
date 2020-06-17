@@ -33,19 +33,23 @@ main {
 
     &__title {
         font-size: 22px;
-        padding: 1.6% 5% 2% 3%;
+        padding: 12px 0px 0px 12px;
         letter-spacing: 0.01em;
         background-color: #fff;
         left: 0%;
-        top: 64%
+        top: 65%;
+        width: 272px;
+        height: 47px;
     }
 
     &__subtitle {
         color: #fff;
         background-color: #000;
-        padding: 2% 5% 2% 3%;
+        padding: 12px 0px 0px 12px;        
         left: 0%;
         top: 75%;
+        width: 487px;
+        height: 42px;
     }
 
     &__tabs {
@@ -98,9 +102,9 @@ main {
 
 .subscribe-box {
     @include flex-row;
-    margin-top: 31px;
-    border-top: 1px dashed #E5E5E5;
-    border-bottom: 1px dashed #E5E5E5;
+    margin-top: 30px;
+    border-top: $dashed;
+    border-bottom: $dashed;
     padding: 10px 18px;
     justify-content: space-between;
     align-items: center;
@@ -131,12 +135,12 @@ main {
     }
 
     &__input:hover {
-        border-color:rgb(192, 192, 192);
+        border-color:#c0c0c0;
     }
 
     &__input:focus {
         outline: none;
-        border-color: rgb(65, 60, 60);
+        border-color: #413c3c;
     }
 
     &__input::placeholder {
@@ -154,11 +158,11 @@ main {
     }
 
     &__btn:hover {
-        border-color: rgb(192, 192, 192);
+        border-color: #c0c0c0;
     }
 
     &__btn:active {
-        border-color: rgb(65, 60, 60);
+        border-color: #413c3c;
     }
 }
 
