@@ -6,14 +6,14 @@ footer {
     @include flex-row;
     border-top: 2px solid #E5E5E5;
     font-size: 12px;
-    padding: 24px 8px 37px;
+    padding-top: 20px;
+    padding-bottom: 35px;
     justify-content: space-between;
     align-items: center;
 
     &__link-fence {
         color: $links-color;
         position: relative;
-        margin-right: 7px;
         
         &:hover {
             text-decoration: underline;
@@ -26,6 +26,7 @@ footer {
             top: 10%;
             right: -6px;
             background-color: #E5E5E5;
+            pointer-events: none;
         }
     }
 
