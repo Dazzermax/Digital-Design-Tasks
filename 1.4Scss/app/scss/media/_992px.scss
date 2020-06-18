@@ -44,10 +44,12 @@
             }
         }
 
-        &__img {
-            margin-right: 0;
-            margin-bottom: 12px;
-        }
+        @each $name in food, blog, a-list, camera, about {
+            &__#{$name}-wrapper{
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        } 
     }
 
     .tweets {

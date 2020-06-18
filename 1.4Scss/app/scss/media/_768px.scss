@@ -14,8 +14,10 @@
         width: 76%;
         justify-content: space-between;
 
-        &__img {
-            display: none
+        @each $name in food, blog, a-list, camera, about {
+            &__#{$name}-wrapper {
+                display: none;
+            }
         }
     }
     

@@ -69,11 +69,39 @@ aside {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 31px; }
+    margin-bottom: 30px; }
     .aside-menu__item:hover {
       border-right: 3px solid #34ACA7; }
-  .aside-menu__img {
-    margin-right: 15px; }
+  .aside-menu__food-wrapper {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    background-size: cover;
+    background-image: url(../../icons/aside-icons/food.png); }
+  .aside-menu__blog-wrapper {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    background-size: cover;
+    background-image: url(../../icons/aside-icons/blog.png); }
+  .aside-menu__a-list-wrapper {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    background-size: cover;
+    background-image: url(../../icons/aside-icons/a-list.png); }
+  .aside-menu__camera-wrapper {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    background-size: cover;
+    background-image: url(../../icons/aside-icons/camera.png); }
+  .aside-menu__about-wrapper {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    background-size: cover;
+    background-image: url(../../icons/aside-icons/about.png); }
   .aside-menu__title {
     color: #34ACA7;
     font-style: italic; }
@@ -353,9 +381,21 @@ footer {
         background-color: #34ACA7; }
       .aside-menu__item:hover {
         border-right: 0; }
-    .aside-menu__img {
+    .aside-menu__food-wrapper {
       margin-right: 0;
-      margin-bottom: 12px; }
+      margin-bottom: 10px; }
+    .aside-menu__blog-wrapper {
+      margin-right: 0;
+      margin-bottom: 10px; }
+    .aside-menu__a-list-wrapper {
+      margin-right: 0;
+      margin-bottom: 10px; }
+    .aside-menu__camera-wrapper {
+      margin-right: 0;
+      margin-bottom: 10px; }
+    .aside-menu__about-wrapper {
+      margin-right: 0;
+      margin-bottom: 10px; }
   .tweets {
     display: none; }
   .subscribe-box__description {
@@ -370,7 +410,15 @@ footer {
   .aside-menu {
     width: 76%;
     justify-content: space-between; }
-    .aside-menu__img {
+    .aside-menu__food-wrapper {
+      display: none; }
+    .aside-menu__blog-wrapper {
+      display: none; }
+    .aside-menu__a-list-wrapper {
+      display: none; }
+    .aside-menu__camera-wrapper {
+      display: none; }
+    .aside-menu__about-wrapper {
       display: none; }
   main {
     padding: 0 7px; }

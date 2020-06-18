@@ -14,17 +14,22 @@ aside {
     &__item {
         @include flex-row;
         align-items: center;
-        margin-bottom: 31px;
+        margin-bottom: 30px;
     
         &:hover {
             border-right: 3px solid $links-color;
         }
     }
 
-    &__img {
-        margin-right: 15px;
+    @each $name in food, blog, a-list, camera, about {
+        &__#{$name}-wrapper{
+            @include icon-size;
+            margin-right: 15px;
+            background-size: cover;
+            background-image: url(../../icons/aside-icons/#{$name}.png);
+        }
     }
-
+        
     &__title {
         color: $links-color;
         font-style: italic;

@@ -12,3 +12,5 @@ $sub-text: #E5E5E5;
 
 // Бордер у блока с формой и подпиской, тайтлы в tweet-blocks.
 $dashed: 1px dashed #E5E5E5;
+
+$aside-icons: '@each $name in food, blog, a-list, camera, about';
