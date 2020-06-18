@@ -1,0 +1,46 @@
+.cards {
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__content {
+        @include flex-col;
+        margin-top: 30px;
+        max-width: 23%;
+    }
+
+    &__img {
+        width: 100%;
+        border: 2px solid #E5E5E5; 
+    }
+
+    &__text {
+        margin-top: 11px;
+    }
+
+    &__title {
+        font-size: 16px;
+        color: $links-color;
+    }
+
+    &__description {
+        margin-top: 9px;
+        line-height: 20px;
+    }
+
+    &__footer {
+        margin-top: 11px;
+    }
+
+    &__link {
+        color: $links-color;
+
+        &-underline:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__date {
+        color: $sub-text;
+    }
+}

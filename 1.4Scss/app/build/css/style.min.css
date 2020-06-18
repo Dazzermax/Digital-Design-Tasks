@@ -123,140 +123,127 @@ main {
   flex-direction: column;
   max-width: 896px;
   margin-top: 40px; }
-
-/* стили слайдера и табов */
-/* слайдер */
-.slider {
-  display: flex;
-  flex-direction: column; }
-  .slider__header {
-    height: 445px;
-    position: relative;
-    overflow: hidden; }
-    .slider__header div {
-      position: absolute;
-      font-style: italic; }
-  .slider__img {
-    width: 100%;
-    height: 100%; }
-  .slider__title {
-    font-size: 22px;
-    padding: 12px 0px 0px 12px;
-    letter-spacing: 0.01em;
-    background-color: #fff;
-    left: 0%;
-    top: 65%;
-    width: 272px;
-    height: 47px; }
-  .slider__subtitle {
-    color: #fff;
-    background-color: #000;
-    padding: 12px 0px 0px 12px;
-    left: 0%;
-    top: 75%;
-    width: 487px;
-    height: 42px; }
-  .slider__tabs {
+  main .slider {
     display: flex;
-    flex-direction: row; }
-
-/* табы */
-.tab {
-  flex: 1;
-  background: #EFF8F7;
-  color: #34ACA7;
-  padding: 26px 19px 22px 19px; }
-  .tab:not(:last-child) {
-    margin-right: 1px; }
-  .tab:hover {
-    background-color: #D9EFEC; }
-  .tab-active {
-    background-color: #D9EFEC; }
-  .tab__title {
-    font-size: 18px; }
-  .tab__subtitle {
-    padding: 4px 0;
-    font-size: 10px;
-    font-style: italic; }
-
-/* стили блока с формой и подпиской */
-.subscribe-box {
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-  border-top: 1px dashed #E5E5E5;
-  border-bottom: 1px dashed #E5E5E5;
-  padding: 10px 18px;
-  justify-content: space-between;
-  align-items: center; }
-  .subscribe-box__img {
-    margin-right: 16px; }
-  .subscribe-box__description {
+    flex-direction: column; }
+    main .slider__header {
+      height: 445px;
+      position: relative;
+      overflow: hidden; }
+    main .slider__img {
+      width: 100%;
+      height: 100%; }
+    main .slider__ main .slider__title {
+      font-size: 22px;
+      padding: 12px 0px 0px 12px;
+      letter-spacing: 0.01em;
+      background-color: #fff;
+      left: 0%;
+      top: 65%;
+      width: 272px;
+      height: 47px; }
+    main .slider__subtitle {
+      color: #fff;
+      background-color: #000;
+      padding: 12px 0px 0px 12px;
+      left: 0%;
+      top: 75%;
+      width: 487px;
+      height: 42px; }
+    main .slider__tabs {
+      display: flex;
+      flex-direction: row; }
+  main .tab {
+    flex: 1;
+    background: #EFF8F7;
+    color: #34ACA7;
+    padding: 26px 19px 22px 19px; }
+    main .tab:not(:last-child) {
+      margin-right: 1px; }
+    main .tab:hover {
+      background-color: #D9EFEC; }
+    main .tab-active {
+      background-color: #D9EFEC; }
+    main .tab__title {
+      font-size: 18px; }
+    main .tab__subtitle {
+      padding: 4px 0;
+      font-size: 10px;
+      font-style: italic; }
+  main .subscribe-box {
     display: flex;
     flex-direction: row;
-    align-items: center; }
-  .subscribe-box__text {
-    font-style: italic;
-    width: 87%; }
-
-.mail-form {
-  display: flex;
-  flex-direction: row; }
-  .mail-form__input {
-    border: 1px solid #E5E5E5;
-    padding: 2px 6px 3px 6px;
-    width: 160px;
-    margin-right: 18px; }
-  .mail-form__input:hover {
-    border-color: #c0c0c0; }
-  .mail-form__input:focus {
-    outline: none;
-    border-color: #413c3c; }
-  .mail-form__input::placeholder {
-    font-size: 10px;
-    color: #E5E5E5; }
-  .mail-form__btn {
-    width: 80px;
-    border: 1px solid #E5E5E5;
-    border-radius: 2px;
-    padding: 5px 17px 5px 18px;
-    font-size: 10px;
-    background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%); }
-  .mail-form__btn:hover {
-    border-color: #c0c0c0; }
-  .mail-form__btn:active {
-    border-color: #413c3c; }
-
-/* стили карточек со статьями */
-.cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-  .cards__content {
-    display: flex;
-    flex-direction: column;
     margin-top: 30px;
-    max-width: 23%; }
-  .cards__img {
-    width: 100%;
-    border: 2px solid #E5E5E5; }
-  .cards__text {
-    margin-top: 11px; }
-  .cards__title {
-    font-size: 16px;
-    color: #34ACA7; }
-  .cards__description {
-    margin-top: 9px;
-    line-height: 20px; }
-  .cards__footer {
-    margin-top: 11px; }
-  .cards__link {
-    color: #34ACA7; }
-    .cards__link-underline:hover {
-      text-decoration: underline; }
-  .cards__date {
-    color: #E5E5E5; }
+    border-top: 1px dashed #E5E5E5;
+    border-bottom: 1px dashed #E5E5E5;
+    padding: 10px 18px;
+    justify-content: space-between;
+    align-items: center; }
+    main .subscribe-box__img {
+      margin-right: 16px; }
+    main .subscribe-box__description {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    main .subscribe-box__text {
+      font-style: italic;
+      width: 87%; }
+  main .mail-form {
+    display: flex;
+    flex-direction: row; }
+    main .mail-form__input {
+      border: 1px solid #E5E5E5;
+      padding: 2px 6px 3px 6px;
+      width: 160px;
+      margin-right: 18px; }
+    main .mail-form__input:hover {
+      border-color: #c0c0c0; }
+    main .mail-form__input:focus {
+      outline: none;
+      border-color: #413c3c; }
+    main .mail-form__input::placeholder {
+      font-size: 10px;
+      color: #E5E5E5; }
+    main .mail-form__btn {
+      width: 80px;
+      border: 1px solid #E5E5E5;
+      border-radius: 2px;
+      padding: 5px 17px 5px 18px;
+      font-size: 10px;
+      background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%); }
+    main .mail-form__btn:hover {
+      border-color: #c0c0c0; }
+    main .mail-form__btn:active {
+      border-color: #413c3c; }
+  main .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    main .cards__content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      max-width: 23%; }
+    main .cards__img {
+      width: 100%;
+      border: 2px solid #E5E5E5; }
+    main .cards__text {
+      margin-top: 11px; }
+    main .cards__title {
+      font-size: 16px;
+      color: #34ACA7; }
+    main .cards__description {
+      margin-top: 9px;
+      line-height: 20px; }
+    main .cards__footer {
+      margin-top: 11px; }
+    main .cards__link {
+      color: #34ACA7; }
+      main .cards__link-underline:hover {
+        text-decoration: underline; }
+    main .cards__date {
+      color: #E5E5E5; }
 
 /* footer стили */
 footer {
