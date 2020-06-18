@@ -1,5 +1,3 @@
-
-
 //  Псевдоэлементы:
 
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
@@ -18,4 +16,9 @@
 @mixin flex-col {
     display: flex;
     flex-direction: column;
+}
+
+@mixin icon-size {
+    width: 32px;
+    height: 32px;
 }

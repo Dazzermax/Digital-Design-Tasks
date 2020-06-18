@@ -1,4 +1,3 @@
-/* От 481px до 768px  */
 
 @media (max-width: 768px) {
 
@@ -22,34 +21,38 @@
     
 
     //  Main
+
     main {
-        padding: 0 7px 0 7px;
+        padding: 0 7px;
     }
 
-    // Слайдер
+    // Slider
 
     .slider__header {
         height: 353px;
     }
 
-    .slider__title {
+    .slider__description {
+        bottom: 0%;
         width: 100%;
-        background-color: #ffffff80;
-        top: 80%;
-        padding: 6px 0px 0px 6px;
-    }
 
-    .slider__subtitle {
-        width: 100%;
-        top: 90%;
-        padding: 6px 0px 0px 6px; 
+        &-title {
+            padding: 6px;
+            width: 100%;
+            background-color: #ffffff80;
+        }
+
+        &-subtitle {
+            padding: 10px;
+        }
+
     }
 
     .slider__tabs {
         display: none;
     }
 
-    // Стили блока с формой и подпиской
+    // Subscribe-box
 
     .subscribe-box {
         flex-direction: column;
@@ -66,7 +69,7 @@
         }
     }
 
-    // Стили карточек со статьями 
+    // Cards
 
     .cards {
         align-items: stretch;

@@ -53,13 +53,13 @@
         padding: 5px 17px 5px 18px;
         font-size: 10px;
         background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
-    }
 
-    &__btn:hover {
-        border-color: #c0c0c0;
-    }
+        &:hover {
+            border-color: #c0c0c0;
+        }
 
-    &__btn:active {
-        border-color: #413c3c;
+        &:active {
+            border-color: #413c3c;
+        }
     }
 }

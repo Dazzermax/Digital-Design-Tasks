@@ -1,5 +1,3 @@
-/* footer стили */
-
 footer {
     margin-top: 40px;
 }
@@ -47,8 +45,7 @@ footer {
 
 @each $name in facebook, twitter, rss {
     .#{$name}-wrapper{
-        height: 32px;
-        width: 32px;
+        @include icon-size;
         background-size: cover;
         background-image: url(../../icons/footer-icons/#{$name}.png);
 

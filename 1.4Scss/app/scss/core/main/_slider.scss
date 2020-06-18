@@ -12,27 +12,26 @@
         height: 100%;
     }
 
-    &__
-
-    &__title {
-        font-size: 22px;
-        padding: 12px 0px 0px 12px;
-        letter-spacing: 0.01em;
-        background-color: #fff;
+    &__description {
+        font-style: italic;
+        position: absolute;
+        bottom: 20%;
         left: 0%;
-        top: 65%;
-        width: 272px;
-        height: 47px;
-    }
 
-    &__subtitle {
-        color: #fff;
-        background-color: #000;
-        padding: 12px 0px 0px 12px;        
-        left: 0%;
-        top: 75%;
-        width: 487px;
-        height: 42px;
+        &-title {
+            padding: 12px;
+            font-size: 22px;
+            width: 65%;
+            letter-spacing: 0.01em;
+            background-color: #fff;
+        }
+
+        &-subtitle {
+            padding: 12px;
+            color: #fff;
+            background-color: #000;
+        }
+
     }
 
     &__tabs {

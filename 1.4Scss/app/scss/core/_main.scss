@@ -2,14 +2,12 @@ main {
     @include flex-col;
     max-width: 896px;
     margin-top: 40px;
-    @import 'main/slider.scss';
-    @import 'main/subscribe-box.scss';
-    @import 'main/cards.scss';
+    
 }
-
-
-
-
+    
+@import 'main/slider.scss';
+@import 'main/subscribe-box.scss';
+@import 'main/cards.scss';
 
 
 
