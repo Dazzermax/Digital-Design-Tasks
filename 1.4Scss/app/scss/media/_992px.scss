@@ -32,6 +32,7 @@
 
             &:hover::after {
                 @include pseudo;
+                left: 0;
                 bottom: -5px;
                 height: 3px;
                 width: 100%;

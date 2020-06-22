@@ -9,7 +9,7 @@
 
     &__img {
         @include icon-size;
-        background: url(../../../icons/main-icons/mail.png) no-repeat;
+        background: url(../../icons/main-icons/mail.png) no-repeat;
         background-size: contain;
         margin-right: 15px;
     }
@@ -21,7 +21,7 @@
 
     &__text {
         font-style: italic;
-        width: 87%;
+        width: 85%;
     }
 }
 
@@ -31,7 +31,7 @@
     &__input {
         border: 1px solid #E5E5E5;
         padding: 3px 6px;
-        width: 160px;
+        min-width: 160px;
         margin-right: 18px;
     }
 
@@ -50,10 +50,10 @@
     }
 
     &__btn {
-        width: 80px;
+        min-width: 80px;
         border: 1px solid #E5E5E5;
         border-radius: 2px;
-        padding: 5px 17px 5px 18px;
+        padding: 5px 18px;
         font-size: 10px;
         background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
 

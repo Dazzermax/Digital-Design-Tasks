@@ -33,6 +33,7 @@
     }
 
     &__link {
+        flex-shrink: 0;
         color: $links-color;
 
         &-underline:hover {
