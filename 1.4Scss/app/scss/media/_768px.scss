@@ -5,7 +5,11 @@
 
     .wrapper {
         max-width: 560px;
-        padding: 0 20px 0 20px;
+        padding: 0 20px;
+    }
+
+    .wrapper__main-aside {
+        width: 100%;
     }
     
     // Aside
@@ -26,13 +30,14 @@
 
     main {
         padding: 0 7px;
+        width: 100%;
     }
 
     // Slider
 
-    .slider__header {
-        height: 353px;
-    }
+    // .slider__header {
+    //     height: 100%;
+    // }
 
     .slider__description {
         bottom: 0%;
@@ -77,7 +82,7 @@
         align-items: stretch;
 
         &__content {
-            max-width: 47%;
+            width: 47%;
         }
 
         &__text {
