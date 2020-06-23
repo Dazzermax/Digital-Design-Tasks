@@ -1,5 +1,5 @@
 
-@media (max-width: 992px) {
+@media (max-width: $screen-md) {
     
     // Base
 
@@ -36,7 +36,7 @@
                 bottom: -5px;
                 height: 3px;
                 width: 100%;
-                background-color: $links-color;
+                background-color: $primary-color;
             }
 
             &:hover {
@@ -44,12 +44,10 @@
             }
         }
 
-        @each $name in food, blog, a-list, camera, about {
-            &__#{$name}-wrapper{
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-        } 
+        &__icon-wrapper {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
     }
 
     .tweets {

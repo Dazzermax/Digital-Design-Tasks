@@ -42,8 +42,8 @@
 
 .tab {
     flex: 1;
-    background: $tab-bg;
-    color: $links-color;
+    background: $tab-fill;
+    color: $primary-color;
     padding: 25px;
 
     &:not(:last-child) {

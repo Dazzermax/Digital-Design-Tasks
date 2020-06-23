@@ -17,21 +17,23 @@ aside {
         margin-bottom: 30px;
     
         &:hover {
-            border-right: 3px solid $links-color;
+            border-right: 3px solid $primary-color;
         }
     }
 
-    @each $name in food, blog, a-list, camera, about {
-        &__#{$name}-wrapper{
-            @include icon-size;
-            margin-right: 15px;
-            background-size: cover;
-            background-image: url(../../icons/aside-icons/#{$name}.png);
+    &__icon-wrapper {
+        margin-right: 15px;
+        @each $name in food, blog, a-list, camera, about {
+            &-#{$name}{
+                @include icon-size;
+                background-size: cover;
+                background-image: url(../../icons/aside-icons/#{$name}.png);
+            }
         }
     }
         
     &__title {
-        color: $links-color;
+        color: $primary-color;
         font-style: italic;
     }
 }
@@ -64,7 +66,7 @@ aside {
     background: #FFFFFF;
     margin-top: 10px;
     align-items: center;
-    color: $links-color;
+    color: $primary-color;
     border: 1px solid #E5E5E5;
     font-size: 10px;
     font-style: italic;
@@ -72,7 +74,7 @@ aside {
     padding: 5px;
 
     &:hover {
-        border-color: $links-color;
+        border-color: $primary-color;
     }
 
     &:active {
@@ -80,6 +82,9 @@ aside {
     }
 
     &__img {
+        @include btn-icon-size;
+        background-repeat: no-repeat;
+        background-image: url(../../icons/aside-icons/twitter-btn.png);
         margin-right: 5px;
     }
 }

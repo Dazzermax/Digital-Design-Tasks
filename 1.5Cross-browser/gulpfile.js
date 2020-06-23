@@ -1,9 +1,10 @@
 const gulp = require('gulp');
-const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
-const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('gulp-autoprefixer');
 
 
 function css_style(done) {
@@ -14,9 +15,7 @@ function css_style(done) {
 			errorLogToConsole: true,
 			// outputStyle: 'compressed' сжать css файл  
 		}))
-		.pipe(autoprefixer({
-            overrideBrowserslist:  ['last 2 versions'],
-        }))
+		.pipe(autoprefixer({overrideBrowserslist: ['last 2 versions']}))
 		.pipe(rename({suffix: '.min'}))
 		.on('error', console.error.bind(console))
 		.pipe(sourcemaps.write('./'))

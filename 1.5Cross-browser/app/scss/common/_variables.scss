@@ -1,14 +1,19 @@
-// цвет всех ссылок
-$links-color: #34ACA7;
-
-// бэкграунд табов
-$tab-bg:#EFF8F7; 
-
-//hover / active эффект.
-$tab-active: #D9EFEC; 
-
-// цвет подписи дат, права в footer
+$primary-color: #34ACA7;
 $sub-text: #E5E5E5; 
-
-// Бордер у блока с формой и подпиской, тайтлы в tweet-blocks.
+$tab-fill:#EFF8F7; 
+$tab-active: #D9EFEC; 
 $dashed: 1px dashed #E5E5E5;
+
+// breakpoints
+
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1176px;
+
+
+
+
+
+
+

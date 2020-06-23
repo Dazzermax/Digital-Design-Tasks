@@ -1,12 +1,9 @@
-//  Псевдоэлементы:
 
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
     content: $content;
     display: $display;
     position: $pos;
   }
-
-// Флексы:
 
 @mixin flex-row {
     display: flex;
@@ -21,5 +18,10 @@
 @mixin icon-size {
     width: 32px;
     height: 32px;
+}
+
+@mixin btn-icon-size {
+    width: 16px;
+    height: 16px;
 }
 

@@ -12,7 +12,7 @@ footer {
     align-items: center;
 
     &__link-fence {
-        color: $links-color;
+        color: $primary-color;
         position: relative;
         
         &:hover {
@@ -42,16 +42,18 @@ footer {
     &__social {
         display: flex;
     }
-}
 
-@each $name in facebook, twitter, rss {
-    .#{$name}-wrapper{
-        @include icon-size;
-        background-size: cover;
-        background-image: url(../../icons/footer-icons/#{$name}.png);
-
-        &:hover {
-            background-image: url(../../icons/footer-icons/#{$name}-hover.png); 
+    &__icon {
+        @each $name in facebook, twitter, rss {
+            &-#{$name}{
+                @include icon-size;
+                background-size: cover;
+                background-image: url(../../icons/footer-icons/#{$name}.png);
+        
+                &:hover {
+                    background-image: url(../../icons/footer-icons/#{$name}-hover.png); 
+                }
+            }
         }
     }
 }

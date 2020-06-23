@@ -1,10 +1,10 @@
 
-@media (max-width: 768px) {
+@media (max-width: $screen-sm) {
 
     // Base
 
     .wrapper {
-        max-width: 560px;
+        width: 100%;
         padding: 0 20px;
     }
 
@@ -15,14 +15,12 @@
     // Aside
 
     .aside-menu {
-        width: 76%;
+        width: 70%;
         justify-content: space-between;
 
-        @each $name in food, blog, a-list, camera, about {
-            &__#{$name}-wrapper {
-                display: none;
-            }
-        }
+       &__icon-wrapper {
+           display: none;
+       }
     }
     
 

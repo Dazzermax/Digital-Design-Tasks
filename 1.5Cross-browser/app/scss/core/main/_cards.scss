@@ -20,7 +20,7 @@
 
     &__title {
         font-size: 16px;
-        color: $links-color;
+        color: $primary-color;
     }
 
     &__description {
@@ -34,7 +34,7 @@
 
     &__link {
         flex-shrink: 0;
-        color: $links-color;
+        color: $primary-color;
 
         &-underline:hover {
             text-decoration: underline;
