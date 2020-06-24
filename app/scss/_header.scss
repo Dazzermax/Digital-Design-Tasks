@@ -1,0 +1,33 @@
+header {
+    padding: 10px;
+}
+
+.title {
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    
+    &__item {
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #000;
+        margin-right: 5px;
+
+        &-fill {
+            flex-grow: 1;
+            background: rgb(13, 221, 134);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+}
