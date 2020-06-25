@@ -1,30 +1,43 @@
-main {
+
+.main-container {
     display: flex;
 }
 
-.container {
+.container-left{
+    flex: 1;
     display: flex;
     flex-direction: column;
 
-    &-left {
-        flex: 1;
-        justify-content: space-between;
+    .container-cards {
+        display: flex;
+        flex-direction: column;
     }
+}
 
-    &-right {
-        flex: 3;
+.container-right {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
 
-        .card-path {
-            flex-direction: row-reverse;
-            flex-grow: 1;
+    .card-path {
+        flex-direction: row-reverse;
 
-            .card__img {
-                width: 45%;
-            }
+        .img-wrapper {
+            flex: 1;
+        }
+    }
+    
+    &-inside {
+        display: flex;
+        flex-wrap: wrap;
+
+        .container-left-cards {
+            display: flex;
+            flex: 2;
         }
 
-        &-inside {
-            flex-direction: row;
+        .container-cards {
+            flex: 1;
         }
     }
 }
@@ -32,12 +45,17 @@ main {
 .card {
     padding: 10px;
     display: flex;
+    flex: 1;
     flex-direction: column;
 
+    .img-wrapper {
+        display: flex;
+    }
+    
     &__content {
         display: flex;
+        flex: 1;
         flex-direction: column;
-        flex-grow: 1;
         padding: 20px;
         background-color: #fff;
     }
@@ -48,13 +66,13 @@ main {
     }
 
     &__description {
-        flex-grow: 1;
+        margin-top: 5px;
         line-height: 20px;
-        margin-top: 10px;
+        flex: 1;
     }
 
     &__footer {
-        margin-top: 30px;
+        margin-top: 10px;
         display: flex;
         justify-content: space-between;
     }

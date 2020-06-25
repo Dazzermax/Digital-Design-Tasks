@@ -1,0 +1,23 @@
+@media (max-width: 800px) {
+    .menu {
+        flex-direction: column-reverse;
+
+        &__item {
+            margin-right: 0;
+
+            &-fill {
+                flex-grow: 1;
+                opacity: 0;
+                padding: 5px;
+            }
+        }
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .container-right-inside {
+        flex-direction: column;
+    }
+}
