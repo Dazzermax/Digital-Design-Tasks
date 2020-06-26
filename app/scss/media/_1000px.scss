@@ -6,7 +6,7 @@
     }
 
     .container-small {
-       .container-small-cards {
+       &-cards {
            flex: 3 1 auto;
        }
     }
