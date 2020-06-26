@@ -1,23 +1,49 @@
 @media (max-width: 800px) {
     .menu {
+        flex: 1 1 auto;
         flex-direction: column-reverse;
 
         &__item {
             margin-right: 0;
+            border-top: 1px solid #e5e5e5;
+
+            &:last-child {
+                margin-bottom: 10px;
+            }
 
             &-fill {
-                flex-grow: 1;
-                opacity: 0;
-                padding: 5px;
+                display: none;
             }
         }
     }
 
-    .main-container {
+    .container-main {
+        flex: 1 0 auto;
         flex-direction: column;
+
+        .container-small {
+            flex: 1 0 auto;
+        }
+
+        .container-large {
+            flex: 1 0 auto;
+
+            .container-large-inside {
+                flex-direction: column;
+                flex: 1 0 auto;
+            }
+        }
     }
 
-    .container-right-inside {
-        flex-direction: column;
+    .img-wrapper {
+        img {
+            width: 100%;
+        }
     }
+
+    .card__content {
+        flex-basis: auto;
+    }
+
+    
 }

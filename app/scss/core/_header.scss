@@ -20,8 +20,15 @@ header {
         margin-right: 5px;
 
         &-fill {
+            padding: 0;
             flex-grow: 1;
-            background: rgb(13, 221, 134);
+
+            input {
+                border: none;
+                background: rgb(13, 221, 134);
+                width: 100%;
+                height: 100%;
+            }
         }
 
         &:last-child {

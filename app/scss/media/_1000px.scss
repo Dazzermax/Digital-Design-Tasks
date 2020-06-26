@@ -5,20 +5,23 @@
         padding: 10px;
     }
 
-    .container-left {
-       .container-cards {
-           flex: 3;
+    .container-small {
+       .container-small-cards {
+           flex: 3 1 auto;
        }
     }
 
-    .container-right {
+    .container-large {
         flex: 1;
 
         .card-path {
-            flex: 1;
+            flex: 1 0 auto;
+                .card__content {
+                    flex-grow: 1;
+                }
             flex-direction: column;
 
-            .card__img {
+            .img-wrapper {
                 width: 100%;
             }
         }
@@ -29,7 +32,7 @@
                 flex: 1;
             }
 
-            .container-left-cards {
+            .container-large-card {
                 flex: 1;
             }
         }
