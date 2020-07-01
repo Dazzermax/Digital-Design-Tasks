@@ -1,0 +1,11 @@
+.control {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    margin: 5px;
+}
+
+.control:last-child {
+    margin-bottom: 0;
+}
