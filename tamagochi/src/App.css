@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  width: 400px;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-bar__container {
+  border: 1px solid #34495E;
+}
+
+.progress-bar__parameter-health {
+  padding: 5px;
+  background-color:#E74C3C;
+  width: 50%;
+}
