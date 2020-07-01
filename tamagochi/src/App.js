@@ -1,5 +1,5 @@
 import React from 'react';
-import Stats from './components/stats/stat.jsx';
+import Parametr from './components/parametrs/parametr.jsx';
 import Control from './components/controls/control.jsx';
 import Input from './components/entry-input/input.jsx'
 import './App.css';
@@ -7,32 +7,40 @@ import './App.css';
 class App extends React.Component {
 
   state = {
-    stats: [
-      {name:'Здоровье'},
-      {name:'Жажда'},
-      {name:'Голод'},
-      {name:'Усталось'},
-    ]
+    parametrs: [
+      {title:'Здоровье'},
+      {title:'Жажда'},
+      {title:'Голод'},
+      {title:'Усталось'},
+    ],
+    controls: [
+        {name: 'health'},
+        {name: 'stamina'},
+        {name: 'hungry'},
+        {name: 'thrist'},
+    ],
+    title: 'MiniGame'
   }
 
-  changeWidth() {
-      console.log('clicked');
-  }
 
   render () {
 
-    const stats = this.state.stats;
+    const parametrs = this.state.parametrs;
 
     return (
       <>
-      <h1 onClick={this.changeWidth}>MiniGame</h1>
+      <h1>{this.state.title}</h1>
         <div className="container">
             <div className="container__inside">
                 <div className="wrapper">
-                    <Stats name={stats[0].name}/>
-                    <Stats name={stats[1].name}/>
-                    <Stats name={stats[2].name}/>
-                    <Stats name={stats[3].name}/>
+                   {parametrs.map((parametr, i) => {
+                       return (
+                           <Parametr
+                                key = {i}
+                                title={parametr.title}
+                            />
+                       )
+                   })}
                 </div>
                 <div className="wrapper">
                     <Control />
