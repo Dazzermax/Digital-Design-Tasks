@@ -1,9 +1,9 @@
 import React from 'react';
-import './control.css';
+import './control.scss';
 
 function button (props) {
     return (
-        <button onClick={props.changeStats} type="button" className="control">Есть</button>
+        <button type="button" className={`control ` + props.class}>{props.title}</button>
     )
 };
 

@@ -4,10 +4,11 @@
   flex-direction: column;
   width: 860px;
   margin: 0 auto;
-}
 
-.container__inside {
-  display: flex;
+  &__inside {
+    display: flex;
+  }
+
 }
 
 .wrapper {

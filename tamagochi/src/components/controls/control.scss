@@ -1,0 +1,29 @@
+.control {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    margin: 5px;
+    text-transform: uppercase;
+
+    &-health {
+        background-color:#E74C3C;
+    }
+
+    &-stamina {
+        background-color:#95A5A6;
+    }
+
+    &-hungry {
+        background-color:#E67E22;
+    }
+
+    &-thrist {
+        background-color:#3498DB;
+    }
+}
+
+.control:last-child {
+    margin-bottom: 0;
+}
+
