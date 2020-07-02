@@ -1,11 +1,10 @@
 import React from 'react';
 import './control.scss';
 
-function button (props) {
-    return (
-        <button type="button" className={`control ` + props.class}>{props.title}</button>
-    )
-};
-
-
-export default button;
+export default (props) => <button 
+                            type="button"
+                            onClick={props.control} 
+                            className={`control ` + props.class}
+                            >
+                            {props.title}
+                          </button>
