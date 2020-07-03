@@ -5,21 +5,49 @@
     color: #fff;
     margin: 5px;
     text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+
+    &:focus {
+        outline: none;
+    }
+    
+    &:active {
+        opacity: 0.9;
+        transition: 0.1s;
+    }
+    
 
     &-health {
         background-color:#E74C3C;
+
+        &:hover {
+            border:1px solid #ad3b2e; ;
+        }
     }
 
     &-stamina {
         background-color:#95A5A6;
+
+        &:hover {
+            border-color: #778485;
+        }
     }
 
     &-hungry {
         background-color:#E67E22;
+
+        &:hover {
+            border-color: #ce7120;
+        }
     }
 
     &-thrist {
         background-color:#3498DB;
+
+        &:hover {
+            border-color: #2b7eb6;
+        }
     }
 }
 
