@@ -57,7 +57,7 @@ class App extends React.Component {
         },
       ],
 
-      title: 'TAMAGOCHI',
+      title: 'MiniGame',
     }
   }
 
@@ -69,12 +69,14 @@ class App extends React.Component {
 
   eat = () => {
     const newparameters = this.state.parameters;
-    newparameters[0].width+= this.random(-2, 2);
-    newparameters[2].width+= -10;
+    newparameters[0].width += this.random(-2, 2);
+    newparameters[2].width += -10;
 
     newparameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
+      } else if (parameter.width < 0) {
+        parameter.width = 0;
       }
     })
     
@@ -86,12 +88,14 @@ class App extends React.Component {
 
   drink = () => {
     const newparameters = this.state.parameters
-    newparameters[0].width+= this.random(-1, 1);
-    newparameters[1].width+= -10;
+    newparameters[0].width += this.random(-1, 1);
+    newparameters[1].width += -10;
 
     newparameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
+      } else if (parameter.width < 0) {
+        parameter.width = 0;
       }
     })
     
@@ -103,14 +107,16 @@ class App extends React.Component {
 
   chill = () => {
     const newparameters = this.state.parameters
-    newparameters[0].width+= this.random(10, 15);
-    newparameters[1].width+= this.random(10, 15);
-    newparameters[2].width+= this.random(10, 15);
-    newparameters[3].width+= -10;
+    newparameters[0].width += this.random(10, 15);
+    newparameters[1].width += this.random(10, 15);
+    newparameters[2].width += this.random(10, 15);
+    newparameters[3].width += -10;
     
     newparameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
+      } else if (parameter.width < 0) {
+        parameter.width = 0;
       }
     })
 
@@ -122,14 +128,16 @@ class App extends React.Component {
 
   work = () => {
     const newparameters = this.state.parameters
-    newparameters[0].width+= this.random(-15, -10);
-    newparameters[1].width+= this.random(10, 15);
-    newparameters[2].width+= this.random(10, 15);
-    newparameters[3].width+= this.random(10, 15);
+    newparameters[0].width += this.random(-15, -10);
+    newparameters[1].width += this.random(10, 15);
+    newparameters[2].width += this.random(10, 15);
+    newparameters[3].width += this.random(10, 15);
 
     newparameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
+      } else if (parameter.width < 0) {
+        parameter.width = 0;
       }
     })
 
@@ -139,10 +147,7 @@ class App extends React.Component {
     })
   }
 
-
   render () {
-    console.log('Render');
-    
     const controls = this.state.controls;
 
     return (
