@@ -168,21 +168,10 @@ class App extends React.Component {
                    })}
                 </div>
                 <div className="wrapper">
-                   {/* {controls.map((control, i) => {
-                     return (
-                        <Control 
-                          key = {i}
-                          title = {control.title}
-                          class = {control.class}
-                          changeWidth = {this.changeHealth}
-                        />
-                     )
-                   })} */}
                    <Control title = {controls[0].title} class = {controls[0].class} control = {this.eat}/>
                    <Control title = {controls[1].title} class = {controls[1].class} control = {this.drink}/>
                    <Control title = {controls[2].title} class = {controls[2].class} control = {this.chill}/>
                    <Control title = {controls[3].title} class = {controls[3].class} control = {this.work}/>
-                 
                 </div>
             </div>
             <Input />
