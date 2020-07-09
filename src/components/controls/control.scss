@@ -18,7 +18,7 @@
     }
     
 
-    &-health {
+    &--health {
         background-color:#E74C3C;
 
         &:hover {
@@ -26,7 +26,7 @@
         }
     }
 
-    &-stamina {
+    &--stamina {
         background-color:#95A5A6;
 
         &:hover {
@@ -34,7 +34,7 @@
         }
     }
 
-    &-hungry {
+    &--hungry {
         background-color:#E67E22;
 
         &:hover {
@@ -42,7 +42,7 @@
         }
     }
 
-    &-thrist {
+    &--thrist {
         background-color:#3498DB;
 
         &:hover {
@@ -53,5 +53,9 @@
 
 .control:last-child {
     margin-bottom: 0;
+}
+
+.control:first-child {
+    margin-top: 0;
 }
 

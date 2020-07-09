@@ -1,12 +1,17 @@
 import React from 'react';
 import './control.scss';
 
-export default (props) => {
-        return  <button 
-                  className={`control ` + props.class}
-                  type="button"
-                  onClick={props.control} 
-                  >
-                  {props.title}
-                </button>
+
+const Control = ({classMod, title, control}) => {
+  return (
+        <button 
+          className={`control control--` + classMod}
+          type="button"
+          onClick={control} 
+          >
+          {title}
+        </button>
+  )
 }
+
+export default Control;

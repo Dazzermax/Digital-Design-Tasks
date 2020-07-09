@@ -4,6 +4,7 @@
   flex-direction: column;
   width: 860px;
   margin: 0 auto;
+  position: relative;
 
   &__inside {
     display: flex;
@@ -19,6 +20,12 @@
   border: 1px solid #e5e5e5;
   margin: 20px;
 }
+
+.game-title {
+  margin: 0;
+  padding: 20px;
+}
+
 
 @media (max-width: 860px) {
   .container {
