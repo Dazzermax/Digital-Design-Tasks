@@ -55,7 +55,7 @@ class App extends React.Component {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min; 
   }
-
+// Методы для контролов
   eat = () => {
     const {parameters, act, history} = this.state;
   
@@ -165,7 +165,7 @@ class App extends React.Component {
       history,
     })
   }
-
+// Методы для инпута
   inputChange = (e) => {
     this.setState({
       inputValue: e.target.value
