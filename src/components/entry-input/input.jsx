@@ -1,9 +1,12 @@
 import React from 'react';
 import './input.scss';
 
+
 function input(props) {
     return (
-        <input className="entry-input" type="text" placeholder="Insert your command..." onChange={props.change}></input>
+        <form className = "entry-form" onSubmit={props.onSubmit}>
+           <input className="entry-input" type="text" placeholder="Insert your command..." onChange={props.onChange}></input>
+        </form>
     )
 }
 

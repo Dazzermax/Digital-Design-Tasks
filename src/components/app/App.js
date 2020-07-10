@@ -10,6 +10,9 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+
+      classMods: ['health', 'thrist', 'hungry', 'stamina'],
+
       parameters: [
         {
           title:'Здоровье',
@@ -32,8 +35,6 @@ class App extends React.Component {
         },
 
       ],
-
-      classMods: ['health', 'thrist', 'hungry', 'stamina'],
   
       controls: [
         {
@@ -58,6 +59,10 @@ class App extends React.Component {
       },
 
       history: [],
+
+      showhistory: false,
+
+      inputValue: '',
     }
   }
 
@@ -72,11 +77,10 @@ class App extends React.Component {
     const newact = this.state.act;
     const newhistory = this.state.history;
     newact.title = 'Вы съели яблоко';
-    newhistory.push('Тамагочи поел');
-
+    
     newparameters[0].width += this.random(-2, 2);
     newparameters[2].width += -10;
-
+    
     newparameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
@@ -84,6 +88,8 @@ class App extends React.Component {
         parameter.width = 0;
       }
     })
+
+    newhistory.push(`Поел! здоровье: ` + newparameters[0].width + ` голод: ` + this.state.parameters[2].width);
     
     this.setState({
       ...this.state,
@@ -99,7 +105,6 @@ class App extends React.Component {
     const newhistory = this.state.history;
     
     newact.title = 'Вы попили водички';
-    newhistory.push('Тамагочи попил');
 
     newparameters[0].width += this.random(-1, 1);
     newparameters[1].width += -10;
@@ -112,6 +117,8 @@ class App extends React.Component {
       }
     })
     
+    newhistory.push(`Попил! здоровье: ` + newparameters[0].width + ` жажда: ` + this.state.parameters[1].width);
+
     this.setState({
       ...this.state,
       parameters: newparameters,
@@ -126,11 +133,8 @@ class App extends React.Component {
     const newhistory = this.state.history;
 
     newact.title = 'Вы хорошо отдохнули';
-    newhistory.push('Тамагочи почилил');
 
     newparameters[0].width += this.random(10, 15);
-    newparameters[1].width += this.random(10, 15);
-    newparameters[2].width += this.random(10, 15);
     newparameters[3].width += -10;
     
     newparameters.forEach(parameter => {
@@ -140,6 +144,8 @@ class App extends React.Component {
         parameter.width = 0;
       }
     })
+
+    newhistory.push(`Почилил! здоровье: ` + newparameters[0].width + ` усталость: ` + this.state.parameters[3].width);
 
     this.setState({
       ...this.state,
@@ -155,7 +161,6 @@ class App extends React.Component {
     const newhistory = this.state.history;
 
     newact.title = 'Вы отлично поработали';
-    newhistory.push('Тамагочи поработал');
     
     newparameters[0].width += this.random(-15, -10);
     newparameters[1].width += this.random(10, 15);
@@ -170,6 +175,12 @@ class App extends React.Component {
       }
     })
 
+    newhistory.push(`Поработал! здоровье: ` + newparameters[0].width +  
+                    ` жажда: ` + this.state.parameters[1].width +
+                    ` голод: ` + this.state.parameters[2].width +
+                    ` усталость: ` + this.state.parameters[2].width 
+                    );
+
     this.setState({
       ...this.state,
       parameters: newparameters,
@@ -178,76 +189,94 @@ class App extends React.Component {
     })
   }
 
-  inputChange = (e) => {
-    const value = e.target.value.toLowerCase();
-    console.log(value);
-    
-    switch(value) {
-      case("есть"):
-      this.eat();
-      break;
-
-      case("пить"):
-      this.drink();
-      break;
-
-      case("отдохнуть"):
-      this.chill();
-      break;
-
-      case("работать"):
-      this.work();
-      break;
-
-      // no default
-    }
-  
+  handleChange = (e) => {
+    this.setState({
+      inputValue: e.target.value
+    });
   }
 
+  handleSubmit = (e) => {
+      const value = this.state.inputValue.toLowerCase();
+      const switchs = value.split(', ');
+      console.log(switchs);
+      
+      switchs.forEach((item) => {
+        if (item === "есть") {
+          this.eat()
+        } else if (item === "пить") {
+          this.drink()
+        } else if (item === "отдохнуть") {
+          this.chill()
+        } else if (item === "работать") {
+          this.work()
+        }
+      })
+      e.preventDefault();
+    }
+
+  toggleHistory = () => {
+
+    this.setState( {
+      showhistory: !this.state.showhistory
+    })
+  }
 
   render () {
-    console.log(this.state.history);
+    console.log(this.state.showhistory);
     
-    const {controls, parameters, act, classMods, history} = this.state;
+    const {controls, parameters, act, classMods, history, showhistory} = this.state;
 
+    let histlist = null;
+    let histBtnTitle = 'Показать историю'
+
+    if (showhistory) {
+      histlist =
+        <ol className="history-wrapper">
+            Жизнь Тамагочи:
+            { 
+              history.map((hist, i) => {
+                  return (
+                    <History
+                      key = {i}
+                      title = {hist} 
+                      />
+                  )
+                })
+            }
+        </ol>
+        histBtnTitle = 'Скрыть историю'
+    }
     return (
       <> 
         <h1 className="game-title">MiniGame</h1>
-        <div className="container">
-            <Act title={act.title}/>
-            <div className="container__inside">
-                <div className="wrapper">
-                    {parameters.map((parameter, i) => {
-                      return (
-                          <Parameter
-                              key = {i}
-                              title = {parameter.title}
-                              classMod = {classMods[i]}
-                              width = {parameter.width}
-                          />
-                      )
-                    })}
-                </div>
-                <div className="wrapper">
-                    <Control title = {controls[0].title} classMod = {classMods[0]} control = {this.eat}/>
-                    <Control title = {controls[1].title} classMod = {classMods[1]} control = {this.drink}/>
-                    <Control title = {controls[2].title} classMod = {classMods[2]} control = {this.chill}/>
-                    <Control title = {controls[3].title} classMod = {classMods[3]} control = {this.work}/>
-                </div>
-            </div>
-            <Input change = {this.inputChange}/>
+        <button className ="toogle-hist" type="button" onClick={this.toggleHistory}>{histBtnTitle}</button>
+        <div className="main-container">
+          <div className="container">
+              <Act title={act.title}/>
+              <div className="container__inside">
+                  <div className="wrapper">
+                      {parameters.map((parameter, i) => {
+                        return (
+                            <Parameter
+                                key = {i}
+                                title = {parameter.title}
+                                classMod = {classMods[i]}
+                                width = {parameter.width}
+                            />
+                        )
+                      })}
+                    {histlist}
+                  </div>
+                  <div className="wrapper">
+                      <Control title = {controls[0].title} classMod = {classMods[0]} control = {this.eat}/>
+                      <Control title = {controls[1].title} classMod = {classMods[1]} control = {this.drink}/>
+                      <Control title = {controls[2].title} classMod = {classMods[2]} control = {this.chill}/>
+                      <Control title = {controls[3].title} classMod = {classMods[3]} control = {this.work}/>
+                  </div>
+              </div>
+              <Input onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+          </div>
         </div>
-        <ol>
-            {history.map((hist, i) => {
-                return (
-                  <History
-                    key = {i}
-                    title = {hist} 
-                    />
-                )
-              }
-            )}
-        </ol>
       </>
     );
   }

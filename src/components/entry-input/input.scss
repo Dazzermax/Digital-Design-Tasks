@@ -1,4 +1,9 @@
+.entry-form {
+    display: flex;
+}
+
 .entry-input {
+    flex: 1;
     padding: 25px;
     margin: 20px;
     border: 1px solid #e5e5e5;
