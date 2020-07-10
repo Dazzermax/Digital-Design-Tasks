@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const History = (props) => {
+const History = ({title}) => {
   return (
-       <li>{props.title}</li>
+       <li>{title}</li>
   )
 }
 

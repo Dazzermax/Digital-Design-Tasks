@@ -2,10 +2,14 @@ import React from 'react';
 import './input.scss';
 
 
-function input(props) {
+function input({onSubmit, onChange}) {
     return (
-        <form className = "entry-form" onSubmit={props.onSubmit}>
-           <input className="entry-input" type="text" placeholder="Insert your command..." onChange={props.onChange}></input>
+        <form className="entry-form" onSubmit={onSubmit}>
+           <input className="entry-input" 
+           type="text" 
+           placeholder="Вводите команды через запятую... пожалуйста" 
+           onChange={onChange}>
+           </input>
         </form>
     )
 }

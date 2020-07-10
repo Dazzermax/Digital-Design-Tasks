@@ -36,24 +36,8 @@ class App extends React.Component {
 
       ],
   
-      controls: [
-        {
-          title: 'Есть',
-        },
-  
-        {
-          title: 'Пить',
-        },
-  
-        {
-          title: 'Отдохнуть',
-        },
-  
-        {
-          title: 'Работать',
-        },
-      ],
-      
+      controls: ['Есть', 'Пить', 'Отдохнуть', 'Работать'],
+
       act: {
         title: ''
       },
@@ -73,15 +57,14 @@ class App extends React.Component {
   }
 
   eat = () => {
-    const newparameters = this.state.parameters;
-    const newact = this.state.act;
-    const newhistory = this.state.history;
-    newact.title = 'Вы съели яблоко';
+    const {parameters, act, history} = this.state;
+  
+    act.title = 'Вы съели яблоко';
     
-    newparameters[0].width += this.random(-2, 2);
-    newparameters[2].width += -10;
+    parameters[0].width += this.random(-2, 2);
+    parameters[2].width += -10;
     
-    newparameters.forEach(parameter => {
+    parameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
       } else if (parameter.width < 0) {
@@ -89,27 +72,25 @@ class App extends React.Component {
       }
     })
 
-    newhistory.push(`Поел! здоровье: ` + newparameters[0].width + ` голод: ` + this.state.parameters[2].width);
+    history.push(`Поел! здоровье: ` + parameters[0].width + ` голод: ` + parameters[2].width);
     
     this.setState({
       ...this.state,
-      parameters: newparameters,
-      act: newact,
-      history: newhistory,
+      parameters,
+      act,
+      history,
     })
   }
 
   drink = () => {
-    const newparameters = this.state.parameters;
-    const newact = this.state.act;
-    const newhistory = this.state.history;
+    const {parameters, act, history} = this.state;
     
-    newact.title = 'Вы попили водички';
+    act.title = 'Вы попили водички';
 
-    newparameters[0].width += this.random(-1, 1);
-    newparameters[1].width += -10;
+    parameters[0].width += this.random(-1, 1);
+    parameters[1].width += -10;
 
-    newparameters.forEach(parameter => {
+    parameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
       } else if (parameter.width < 0) {
@@ -117,27 +98,25 @@ class App extends React.Component {
       }
     })
     
-    newhistory.push(`Попил! здоровье: ` + newparameters[0].width + ` жажда: ` + this.state.parameters[1].width);
+    history.push(`Попил! здоровье: ` + parameters[0].width + ` жажда: ` + parameters[1].width);
 
     this.setState({
       ...this.state,
-      parameters: newparameters,
-      act: newact,
-      history: newhistory,
+      parameters,
+      act,
+      history,
     })
   }
 
   chill = () => {
-    const newparameters = this.state.parameters;
-    const newact = this.state.act;
-    const newhistory = this.state.history;
+    const {parameters, act, history} = this.state;
 
-    newact.title = 'Вы хорошо отдохнули';
+    act.title = 'Вы хорошо отдохнули';
 
-    newparameters[0].width += this.random(10, 15);
-    newparameters[3].width += -10;
+    parameters[0].width += this.random(10, 15);
+    parameters[3].width += -10;
     
-    newparameters.forEach(parameter => {
+    parameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
       } else if (parameter.width < 0) {
@@ -145,29 +124,27 @@ class App extends React.Component {
       }
     })
 
-    newhistory.push(`Почилил! здоровье: ` + newparameters[0].width + ` усталость: ` + this.state.parameters[3].width);
+    history.push(`Почилил! здоровье: ` + parameters[0].width + ` усталость: ` + this.state.parameters[3].width);
 
     this.setState({
       ...this.state,
-      parameters: newparameters,
-      act: newact,
-      history: newhistory,
+      parameters: parameters,
+      act: act,
+      history: history,
     })
   }
 
   work = () => {
-    const newparameters = this.state.parameters;
-    const newact = this.state.act;
-    const newhistory = this.state.history;
+    const {parameters, act, history} = this.state;
 
-    newact.title = 'Вы отлично поработали';
+    act.title = 'Вы отлично поработали';
     
-    newparameters[0].width += this.random(-15, -10);
-    newparameters[1].width += this.random(10, 15);
-    newparameters[2].width += this.random(10, 15);
-    newparameters[3].width += this.random(10, 15);
+    parameters[0].width += this.random(-15, -10);
+    parameters[1].width += this.random(10, 15);
+    parameters[2].width += this.random(10, 15);
+    parameters[3].width += this.random(10, 15);
 
-    newparameters.forEach(parameter => {
+    parameters.forEach(parameter => {
       if (parameter.width > 100) {
         parameter.width = 100;
       } else if (parameter.width < 0) {
@@ -175,27 +152,27 @@ class App extends React.Component {
       }
     })
 
-    newhistory.push(`Поработал! здоровье: ` + newparameters[0].width +  
-                    ` жажда: ` + this.state.parameters[1].width +
-                    ` голод: ` + this.state.parameters[2].width +
-                    ` усталость: ` + this.state.parameters[2].width 
-                    );
+    history.push(`Поработал! здоровье: ` + parameters[0].width +  
+                              ` жажда: ` + parameters[1].width +
+                              ` голод: ` + parameters[2].width +
+                          ` усталость: ` + parameters[2].width 
+                );
 
     this.setState({
       ...this.state,
-      parameters: newparameters,
-      act: newact,
-      history: newhistory,
+      parameters,
+      act,
+      history,
     })
   }
 
-  handleChange = (e) => {
+  inputChange = (e) => {
     this.setState({
       inputValue: e.target.value
     });
   }
 
-  handleSubmit = (e) => {
+  formSubmit = (e) => {
       const value = this.state.inputValue.toLowerCase();
       const switchs = value.split(', ');
       console.log(switchs);
@@ -222,12 +199,10 @@ class App extends React.Component {
   }
 
   render () {
-    console.log(this.state.showhistory);
-    
     const {controls, parameters, act, classMods, history, showhistory} = this.state;
 
     let histlist = null;
-    let histBtnTitle = 'Показать историю'
+    let histBtnTitle = 'Показать историю';
 
     if (showhistory) {
       histlist =
@@ -249,7 +224,7 @@ class App extends React.Component {
     return (
       <> 
         <h1 className="game-title">MiniGame</h1>
-        <button className ="toogle-hist" type="button" onClick={this.toggleHistory}>{histBtnTitle}</button>
+        <button className="toogle-hist" type="button" onClick={this.toggleHistory}>{histBtnTitle}</button>
         <div className="main-container">
           <div className="container">
               <Act title={act.title}/>
@@ -258,23 +233,23 @@ class App extends React.Component {
                       {parameters.map((parameter, i) => {
                         return (
                             <Parameter
-                                key = {i}
-                                title = {parameter.title}
-                                classMod = {classMods[i]}
-                                width = {parameter.width}
+                                key={i}
+                                title={parameter.title}
+                                classMod={classMods[i]}
+                                width={parameter.width}
                             />
                         )
                       })}
                     {histlist}
                   </div>
                   <div className="wrapper">
-                      <Control title = {controls[0].title} classMod = {classMods[0]} control = {this.eat}/>
-                      <Control title = {controls[1].title} classMod = {classMods[1]} control = {this.drink}/>
-                      <Control title = {controls[2].title} classMod = {classMods[2]} control = {this.chill}/>
-                      <Control title = {controls[3].title} classMod = {classMods[3]} control = {this.work}/>
+                      <Control title={controls[0]} classMod={classMods[0]} control={this.eat}/>
+                      <Control title={controls[1]} classMod={classMods[1]} control={this.drink}/>
+                      <Control title={controls[2]} classMod={classMods[2]} control={this.chill}/>
+                      <Control title={controls[3]} classMod={classMods[3]} control={this.work}/>
                   </div>
               </div>
-              <Input onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+              <Input onChange={this.inputChange} onSubmit={this.formSubmit}/>
           </div>
         </div>
       </>
