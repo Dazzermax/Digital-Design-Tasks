@@ -1,8 +1,9 @@
 import React from 'react';
+import './Chat.scss';
 
 function Chat () {
     return (
-        <main className="Chat">Чат</main>
+        <main className="chat">Чат</main>
     )
 }
 
