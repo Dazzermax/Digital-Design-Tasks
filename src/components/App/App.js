@@ -14,7 +14,7 @@ function App() {
         <div className="wrapper">
           <Navigation />
           <Chat />
-          <Profile />
+          {/* <Profile /> */}
         </div>
       </div>
     </>

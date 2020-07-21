@@ -6,15 +6,22 @@
     margin-top: 10px;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+            -23px 0 20px -23px rgba(0, 0, 0, .6),
+            23px 0 20px -23px rgba(0, 0, 0, .6);
 
     &__header {
         display: flex;
         justify-content: space-between;
     }
 
+    &__title {
+        font-weight: 600;
+    }
+
     &__body {
         margin-top: 10px;
+        padding: 10px;
         overflow: scroll;
         overflow-x:hidden;
     }
