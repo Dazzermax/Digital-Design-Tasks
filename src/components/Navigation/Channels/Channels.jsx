@@ -14,6 +14,11 @@ function Channels() {
                 <div># Kanal 3</div>
                 <div># Kanal 4</div>
                 <div># Kanal 5</div>
+                <div># Kanal 5</div>
+                <div># Kanal 5</div>
+                <div># Kanal 5</div>
+                <div># Kanal 5</div>
+                <div># Kanal 5</div>
             </div>        
         </div>
     )

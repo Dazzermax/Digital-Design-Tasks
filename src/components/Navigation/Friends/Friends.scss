@@ -1,9 +1,12 @@
 .friends {
     flex: 2;
+    padding: 5px;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
     overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
 
     &__header {
         display: flex;

@@ -1,8 +1,9 @@
 .chat {
-    border-radius: 4px 4px 0 0;
-    border: 1px solid #e7e8ec;
     flex: 3;
-    margin: 10px;
-    padding: 15px;
-    background: #ffe;
+    background: radial-gradient(#cdf8c4c9 0%, rgb(190, 230, 181) 100%);
+    border-left: 1px solid rgb(191, 204, 193);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
+
