@@ -10,13 +10,13 @@ function Channels() {
                 <span className="channels__counter">8</span>
             </div>
             <div className="channels__body">
-                <div className="channel"># Kanal 1</div>
-                <div className="channel"># Kanal 2</div>
-                <div className="channel"># Kanal 3</div>
-                <div className="channel"># Kanal 4</div>
-                <div className="channel"># Kanal 5</div>
-                <div className="channel"># Kanal 6</div>
-                <div className="channel"># Kanal 7</div>
+                <Link className="channel" to="/general"># general</Link>
+                <Link className="channel" to="/"># support</Link>
+                <Link className="channel"># marketing</Link>
+                <Link className="channel"># thailand</Link>
+                <Link className="channel"># jobs</Link>
+                <Link className="channel"># startups</Link>
+                <Link className="channel"># freelance</Link>
             </div>        
         </div>
     )

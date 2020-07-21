@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './style/reset.scss';
 import './style/body.scss';
 import './style/scroll.scss';
-import App from './components/App/App';
+import App from './components/App/App.jsx';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
