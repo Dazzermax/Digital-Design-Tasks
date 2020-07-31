@@ -17,6 +17,16 @@
         margin-right: 15px;
         background-image: url(https://st17.styapokupayu.ru/images/blog_posts/covers/000/233/094_medium.jpg?1548158173);
         background-size: cover;
+        cursor: pointer;
+    }
+
+    &__name {
+        cursor: pointer;
+        color: #3c752f;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
 }

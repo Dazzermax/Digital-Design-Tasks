@@ -2,7 +2,7 @@ import React from 'react';
 import './Friends.scss';
 import Person from './Person/Person'
 
-const person = ['John Connor', 'John Donnor', 'John Jonnor', 'John Ronnor', 'John Gonnor']
+const person = ['John Connor', 'John Donnor', 'John Jonnor', 'John Ronnor', 'John Gonnor'];
 
 function Friends() {
     return (
