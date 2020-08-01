@@ -1,51 +1,49 @@
 import {observable, computed, action} from 'mobx';
 
+export class ChatStore {
 
+    @observable chats = []
+   
 
-class Chat {
-
-    @observable params = {
-        value : "",  
-        disabled : null,
+    @action sendMessage() {
+        console.log('jopa');
+        this.chats.push('push')
     }
 
-
-    // @action bindData = (e, name) => {      
-    //     this.params.value = getTarget(e).value;        
-    // }; 
+   
 }
 
 
-export default new Chat;
+export default new ChatStore
 
 
-const person = ['John Connor', 'John Donnor', 'John Jonnor', 'John Ronnor', 'John Gonnor'];
+// const person = ['John Connor', 'John Donnor', 'John Jonnor', 'John Ronnor', 'John Gonnor'];
 
-const friends = [
+// const friends = [
     
-    {
-        online: true,
-        name: 'John Connor',
-    },
-    {
-        online: true,
-        name: 'John Connor',
-    },
-    {
-        online: true,
-        name: 'John Connor',
-    },
-    {
-        online: true,
-        name: 'John Connor',
-    },
-    {
-        online: true,
-        name: 'John Connor',
-    },
-    {
-        online: true,
-        name: 'John Connor',
-    },
+//     {
+//         online: true,
+//         name: 'John Connor',
+//     },
+//     {
+//         online: true,
+//         name: 'John Connor',
+//     },
+//     {
+//         online: true,
+//         name: 'John Connor',
+//     },
+//     {
+//         online: true,
+//         name: 'John Connor',
+//     },
+//     {
+//         online: true,
+//         name: 'John Connor',
+//     },
+//     {
+//         online: true,
+//         name: 'John Connor',
+//     },
   
-]
+// ]
