@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation/Navigation';
 import Chat from '../components/Chat/Chat';
 import Profile from '../components/Profile/Profile';
 import Header from '../components/Header/Header';
+import {observer, inject} from 'mobx-react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
