@@ -1,7 +1,18 @@
-.message-input {
+.input-wrapper {
+    display: flex;
     margin-top: auto;
-    outline: none;
-    border: none;
-    resize: none;
-    padding: 20px 10px 10px;
+    align-items: center;
+
+    .message-input {
+        flex: 1;
+        outline: none;
+        resize: none;
+        border: none;
+        padding: 20px 10px 10px;
+    }
+
+    // .btn-send {
+    //     margin: 20px;
+    //     padding: 15px;
+    // }
 }

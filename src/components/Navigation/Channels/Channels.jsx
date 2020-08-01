@@ -13,8 +13,8 @@ function Channels() {
                 <span className="channels__counter">{channels.length}</span>
             </div>
             <div className="channels__body">
-                {channels.map(channel => {
-                    return <Link to={"/" + channel} className="channel">{"#" + channel}</Link>
+                {channels.map((channel, i) => {
+                    return <Link to={`/ ${channel}`} key = {i} className="channel">{`# ${channel}`}</Link>
                 })}
             </div>        
         </div>

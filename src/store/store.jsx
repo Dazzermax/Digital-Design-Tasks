@@ -3,7 +3,7 @@ import {observable, computed, action} from 'mobx';
 
 
 class Chat {
-
+    chat = [];
 }
 
 

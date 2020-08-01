@@ -13,7 +13,7 @@ function Friends() {
             </div>
             <div className="friends__body">
                {person.map(person => {
-                   return <Person name={person}/>
+                   return <Person name={person} key={person}/>
                })}
             </div>
         </div>

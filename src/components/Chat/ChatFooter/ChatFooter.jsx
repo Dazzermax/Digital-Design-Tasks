@@ -4,9 +4,11 @@ import './ChatFooter.scss'
 
 function ChatFooter() {
     return (
-        <textarea className="message-input" placeholder="Write a message..."></textarea>
+        <div className="input-wrapper">
+            <textarea className="message-input" placeholder="Write a message..."></textarea>
+            {/* <button className="btn-send">Send</button> */}
+        </div>
     )
 }
-
 
 export default ChatFooter;
