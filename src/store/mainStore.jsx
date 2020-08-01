@@ -3,7 +3,16 @@ import {observable, computed, action} from 'mobx';
 
 
 class Chat {
-    chat = [];
+
+    @observable params = {
+        value : "",  
+        disabled : null,
+    }
+
+
+    // @action bindData = (e, name) => {      
+    //     this.params.value = getTarget(e).value;        
+    // }; 
 }
 
 
