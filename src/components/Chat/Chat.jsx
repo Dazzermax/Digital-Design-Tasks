@@ -8,27 +8,13 @@ import './Chat.scss';
 
 function Chat (props) {
     console.log(props)
-    // let header = routesHeader.map(route => {
-    //     return <Route path={route.url}
-    //                   component={route.component}
-    //                   exact={route.exact}
-    //                   key={route.url}
-    //                   title={route.title}
-    //             />
-    // })
 
-
-      
     return (
-        
         <main className="chat">
-            <Router>
-                <ChatHeader chatName={props.chatName}/>
-                <ChatPosts chatName={props.chatName}/>
-                <ChatFooter chatName={props.chatName}/>
-            </Router>
+            <ChatHeader chatName={props.chatName}/>
+            <ChatPosts chatName={props.chatName}/>
+            <ChatFooter chatName={props.chatName}/>
         </main>
-        
     )
 }
 

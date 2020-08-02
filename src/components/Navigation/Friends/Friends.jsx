@@ -1,23 +1,25 @@
 import React from 'react';
 import './Friends.scss';
-import Person from './Person/Person'
+import { observer } from 'mobx-react';
+import state from '../../../store/mainStore';
+import User from './Person/Person';
 
-const person = ['John Connor', 'John Donnor', 'John Jonnor', 'John Ronnor', 'John Gonnor'];
 
-function Friends() {
+const Friends = observer(() => {
+
+    const {users} = state;
+
     return (
         <div className="friends">
-             <div className="friends__header">
-                <span className="friends__title">Friends</span>
-                <span className="friends__counter">{person.length}</span>
+            <div className="friends__header">
+                <span className="friends__title">Личности)</span>
+                <span className="friends__counter">{users.length}</span>
             </div>
             <div className="friends__body">
-               {person.map(person => {
-                   return <Person name={person} key={person}/>
-               })}
+               {users.map((user, i) => <User user={user} key={i}/>)}
             </div>
         </div>
     )
-}
+})
 
 export default Friends;
