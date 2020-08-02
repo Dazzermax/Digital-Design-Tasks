@@ -10,15 +10,14 @@ class ChatStore {
         this.setCurrentUser = this.setCurrentUser.bind(this);
         this.setSelectedChannel = this.setSelectedChannel.bind(this);
         this.deleteChannel = this.deleteChannel.bind(this);
+        this.deletePerson = this.deletePerson.bind(this);
     }
 
     @observable channels = [
-        
         {
             name: 'general',
             messages: [],
         }, 
-     
     ]
 
 
@@ -44,7 +43,8 @@ class ChatStore {
         const findChat = this.channels.find(channel => channel.name === chatName);
         findChat.messages.push({
             messageText: value,
-            userName: this.currentUser.name
+            userName: this.currentUser.name,
+            date: new Date(),
         });
     };
 
@@ -61,8 +61,13 @@ class ChatStore {
     }
 
     @action deleteChannel(name) {
-        const index = this.channels.findIndex((channel) => channel.name == name);
+        const index = this.channels.findIndex(channel => channel.name == name);
         this.channels.splice(index, 1);
+    }
+
+    @action deletePerson(name) {
+        const index = this.users.findIndex(user => user.name == name);
+        this.users.splice(index, 1);
     }
 
 }

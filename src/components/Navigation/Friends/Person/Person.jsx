@@ -6,7 +6,7 @@ import store from '../../../../store/mainStore';
     
 const Person = observer((props) => {
 
-    const {setCurrentUser, currentUser} = store;
+    const {setCurrentUser, currentUser, deletePerson} = store;
     const isCurrentUser = props.user.name === currentUser.name;
     return (
         <>
@@ -15,6 +15,7 @@ const Person = observer((props) => {
                 <div className="person__avatar"></div>
                 <div className="person__name">{props.user.name}</div>
                 {isCurrentUser ? <span>Eto vi</span> : null}
+                <button className="btn btn-delete" onClick={() => deletePerson(props.user.name)}>BOB</button>
             </div>
         </>
     )
