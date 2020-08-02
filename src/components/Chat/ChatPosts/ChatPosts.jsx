@@ -16,18 +16,23 @@ const ChatPosts = observer((props) => {
 	function parseDate(date) {
 		return date.getHours() + ':' + date.getMinutes()
 	}
+
+	let fiteredMessages;
+
+	if (props.filter != '') {
+		fiteredMessages = currentChat.messages.filter(message => message.messageText.toLowerCase()
+											  .includes(props.filter.toLowerCase()))
+	} else fiteredMessages = currentChat.messages
   
 	return (
 		<div className="posts">
 			<ul className="posts-container">
-				{currentChat.messages.map(message => {
+				{fiteredMessages.map(message => {
 					return (
-						<>
-							<li className="message">{
-								userTitle(message.userName) + ': ' + message.messageText}
-								{parseDate(message.date)}
-							</li>
-						</>
+						<li className="message">{
+							userTitle(message.userName) + ': ' + message.messageText}
+							{parseDate(message.date)}
+						</li>
 					)
 				})}
 			</ul>

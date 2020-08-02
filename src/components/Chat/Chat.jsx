@@ -8,11 +8,12 @@ import './Chat.scss';
 
 function Chat (props) {
     console.log(props)
+    let [filter, setFilter] = React.useState('');
 
     return (
         <main className="chat">
-            <ChatHeader chatName={props.chatName}/>
-            <ChatPosts chatName={props.chatName}/>
+            <ChatHeader chatName={props.chatName} setFilterFn={setFilter} />
+            <ChatPosts chatName={props.chatName} filter={filter} />
             <ChatFooter chatName={props.chatName}/>
         </main>
     )
