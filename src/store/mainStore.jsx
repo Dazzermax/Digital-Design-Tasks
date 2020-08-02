@@ -7,6 +7,7 @@ class ChatStore {
         this.sendMessage = this.sendMessage.bind(this);
         this.addUser = this.addUser.bind(this);
         this.setCurrentUser = this.setCurrentUser.bind(this);
+        this.addChannel = this.addChannel.bind(this);
     }
 
     @observable channels = [
@@ -56,6 +57,10 @@ class ChatStore {
         this.currentUser = user;
     }
    
+    @action addChannel(value) {
+        this.channels.push({name: value, messages:[]})
+    }
+
 }
 
 

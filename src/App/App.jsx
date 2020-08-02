@@ -27,7 +27,7 @@ const App = observer(() => {
                 )
               })}
           </Switch>
-          {/* <Profile /> */}
+          <Profile />
         </div>
       </div>
     </Router>
