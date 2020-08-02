@@ -6,17 +6,19 @@ import { observer } from 'mobx-react';
 
 
 const ChatFooter = observer(() => {
-
-    // const { sendMessage } = state;
+   const {sendMessage} = state;
+   const enterKey = 13;
+    
     return (
         <div className="input-wrapper">
            <TextareaAutosize className="message-input" 
                              placeholder="Write a message"
                              onKeyDown = {
                                  (e) => {
-                                     if (e.keyCode === 13) {
-                                         console.log('jopa');
-                                         e.target.value = ''
+                                     if (e.keyCode === enterKey) {
+                                        console.log(state.chats);
+                                        sendMessage(e.target.value);
+                                        e.target.value = '';
                                      }
                                  }
                              }

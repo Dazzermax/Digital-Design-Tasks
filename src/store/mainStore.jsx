@@ -1,20 +1,23 @@
 import {observable, computed, action} from 'mobx';
 
-export class ChatStore {
 
-    @observable chats = []
-   
+class ChatStore {
 
-    @action sendMessage() {
-        console.log('jopa');
-        this.chats.push('push')
+    constructor() {
+        this.sendMessage = this.sendMessage.bind(this);
     }
 
+    @observable chats = [];
    
+
+    @action sendMessage(value) {
+        this.chats.push(value)
+    };
+
 }
 
 
-export default new ChatStore
+export default new ChatStore();
 
 
 // const person = ['John Connor', 'John Donnor', 'John Jonnor', 'John Ronnor', 'John Gonnor'];

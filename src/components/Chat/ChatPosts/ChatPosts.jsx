@@ -1,13 +1,22 @@
 import React from 'react'
+import state from '../../../store/mainStore';
+import { observer } from 'mobx-react';
 import './ChatPosts.scss'
 
-function ChatPosts() {
+const ChatPosts = observer(() => {
+    const { chats } = state;
     return (
         <div className="posts">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat illum quasi itaque est quam voluptates, quisquam laborum aliquam incidunt libero sed maxime. Cupiditate ducimus quibusdam quaerat natus nisi cumque repellendus?
+            <ul className="posts-container">
+                {chats.map(chat => {
+                    return (
+                        <li className="message">{chat}</li>
+                    )
+                })}
+            </ul>
         </div>
     )
-}
+})
 
 
 export default ChatPosts;
