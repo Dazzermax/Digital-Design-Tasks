@@ -12,23 +12,58 @@
 
     &__header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         user-select: none;
+
+        .btn-add-channel {
+            background-color: rgb(156, 231, 156);
+            border: 1px solid #d4d1d1;
+            border-radius: 4px;
+            padding: 7px;
+            outline: none;
+            transition: 0.2s;
+
+            &:hover {
+                border: 1px solid #b0c4ac;
+            }
+
+            &:active {
+                background-color: rgb(184, 243, 184);
+            }
+        }
+
     }
 
     &__title {
         font-weight: 600;
     }
 
+    .input-add-channel {
+        margin-top: 20px;
+        padding: 5px;
+        outline: none;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        transition: 0.1s;
+    
+        &:hover, &:focus {
+            border: 1px solid #aca9a9;
+        }
+    }
+
     &__body {
-        margin-top: 10px;
+        padding: 5px;
+        margin-top: 5px;
         flex-grow: 0;
-        padding: 10px;
         overflow: scroll;
         overflow-x: hidden;
-    
+
         .channel {
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
             text-decoration: none;
             cursor: pointer;
             padding: 10px;
@@ -43,6 +78,20 @@
             &:hover {
                 background-color: rgba(243, 245, 239, 0.815);
             }
+
+            .btn-delete {
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                width: 20px;
+                height: 20px;
+                background-image: url(../../../assets/png/delete-btn.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            
         }
        
     }

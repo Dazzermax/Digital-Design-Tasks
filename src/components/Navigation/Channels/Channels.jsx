@@ -4,9 +4,6 @@ import state from '../../../store/mainStore';
 import { Link } from 'react-router-dom';
 import { observer } from 'mobx-react';
 
-
-
-
 const Channels = observer(() => {
     const { channels, addChannel, setSelectedChannel, selectedChannel, deleteChannel } = state ;
     const enterKey = 13;
@@ -17,11 +14,11 @@ const Channels = observer(() => {
             <div className="channels__header">
                 <span className="channels__title">Каналы:</span>
                 <span className="channels__counter">{channels.length}</span>
+                <button className="btn btn-add-channel" onClick={() => toggleShowInput(!showInput)}>Добавить</button>
             </div>
-            <button className="btn btn-add-channel" onClick={() => toggleShowInput(!showInput)}>Добавить</button>
             {showInput &&   <input  type="text" 
                                     className="input-add-channel" 
-                                    placeholder="Type name channel..." 
+                                    placeholder="Введи имя канала и нажми Enter..." 
                                     onKeyDown = {
                                         (e) => {
                                             if (e.keyCode === enterKey) {
@@ -40,7 +37,10 @@ const Channels = observer(() => {
                             className={channel.name === selectedChannel ? "channel channel-active" : "channel"} 
                             onClick={() => setSelectedChannel(channel.name)}> 
                                     {`# ${channel.name}`}
-                                    <button onClick={() => deleteChannel(channel.name)}>DEL</button> 
+                                    <button className="btn btn-delete" 
+                                            onClick={() => deleteChannel(channel.name)}
+                                            title="Удалить" 
+                                    />
                             </Link>
                 })}
             </div>        

@@ -18,7 +18,7 @@ function Header() {
                 <span className="person-invite">Введи свою личность:</span>
                 <input  className="input-person"
                         type="text" 
-                        placeholder="Вводи и нажми Enter"  
+                        placeholder="Введи и нажми Enter"  
                         onKeyDown = {
                                         (e) => {
                                             if (e.keyCode === enterKey) {
