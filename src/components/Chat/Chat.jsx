@@ -6,8 +6,8 @@ import routesHeader from '../../routes/routesHeader';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './Chat.scss';
 
-function Chat () {
-
+function Chat (props) {
+    console.log(props)
     // let header = routesHeader.map(route => {
     //     return <Route path={route.url}
     //                   component={route.component}
@@ -23,8 +23,8 @@ function Chat () {
         
         <main className="chat">
             <Router>
-                <ChatHeader/>
-                <ChatPosts />
+                <ChatHeader chatName={props.chatName}/>
+                <ChatPosts chatName={props.chatName}/>
                 <ChatFooter />
             </Router>
         </main>

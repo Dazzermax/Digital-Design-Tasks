@@ -6,7 +6,7 @@ import Profile from '../components/Profile/Profile';
 import Header from '../components/Header/Header';
 import {observer, inject} from 'mobx-react';
 import state from '../store/mainStore';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { observe } from 'mobx';
 
 
@@ -23,7 +23,7 @@ const App = observer(() => {
           <Switch>
               {channels.map(channel => {
                 return (
-                  <Route component={Chat} path={`/${channel.name}`} />
+                  <Route component={() => <Chat chatName={channel.name} />} path={`/${channel.name}`} />
                 )
               })}
           </Switch>
