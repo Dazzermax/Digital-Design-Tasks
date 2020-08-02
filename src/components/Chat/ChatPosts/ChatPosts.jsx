@@ -14,8 +14,14 @@ const ChatPosts = observer((props) => {
 	}
 
 	function parseDate(date) {
-		return date.getHours() + ':' + date.getMinutes()
+		let hours = (date.getHours() < 10) ? '0'+ date.getHours() : date.getHours();
+		let minutes = (date.getMinutes() < 10) ? '0'+ date.getMinutes() : date.getMinutes();
+		
+		return hours + ':' + minutes
 	}
+	
+	
+	
 
 	let fiteredMessages;
 
@@ -29,9 +35,13 @@ const ChatPosts = observer((props) => {
 			<ul className="posts-container">
 				{fiteredMessages.map(message => {
 					return (
-						<li className="message">{
-							userTitle(message.userName) + ': ' + message.messageText}
-							{parseDate(message.date)}
+						<li className="message">
+							<span className="user-name">{userTitle(message.userName) + ': '}</span> 
+							<p className="user-message">
+								{message.messageText}
+								<span className="data-message">{parseDate(message.date)}</span>
+							</p>
+							
 						</li>
 					)
 				})}

@@ -15,7 +15,7 @@ function Header() {
                 <img className="logo" src={logo} alt="logo"/>
             </Link>
             <div className="person-container">
-                <span className="person-invite">Введи свою личность:</span>
+                <span className="person-invite">Введи новую личность:</span>
                 <input  className="input-person"
                         type="text" 
                         placeholder="Введи и нажми Enter"  
