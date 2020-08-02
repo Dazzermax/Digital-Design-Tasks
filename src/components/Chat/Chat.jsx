@@ -25,7 +25,7 @@ function Chat (props) {
             <Router>
                 <ChatHeader chatName={props.chatName}/>
                 <ChatPosts chatName={props.chatName}/>
-                <ChatFooter />
+                <ChatFooter chatName={props.chatName}/>
             </Router>
         </main>
         

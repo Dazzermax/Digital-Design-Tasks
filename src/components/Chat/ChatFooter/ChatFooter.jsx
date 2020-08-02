@@ -5,12 +5,10 @@ import state from '../../../store/mainStore';
 import { observer } from 'mobx-react';
 
 
-const ChatFooter = observer(() => {
+const ChatFooter = observer((props) => {
    const {sendMessage} = state;
    const enterKey = 13;
-
    
-    
     return (
         <div className="input-wrapper">
            <TextareaAutosize className="message-input" 
@@ -18,7 +16,7 @@ const ChatFooter = observer(() => {
                              onKeyDown = {
                                  (e) => {
                                      if (e.keyCode === enterKey) {
-                                        sendMessage(e.target.value);
+                                        sendMessage(e.target.value, props.chatName);
                                         e.target.value = '';
                                      }
                                  }
