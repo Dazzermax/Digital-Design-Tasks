@@ -1,0 +1,25 @@
+
+
+
+.arrow {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 10px;
+    background: rgb(108, 194, 119);
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10px;
+        border-right-color: #6cc277;
+        border-width: 12px 12px 12px 1px;
+    }
+}

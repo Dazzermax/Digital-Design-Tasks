@@ -12,7 +12,7 @@ const Friends = observer(() => {
     return (
         <div className="friends">
             <div className="friends__header">
-                <span className="friends__title">Личности)</span>
+                <span className="friends__title">Твои Личности: </span>
                 <span className="friends__counter">{users.length}</span>
             </div>
             <div className="friends__body">
