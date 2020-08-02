@@ -15,10 +15,10 @@ const Channels = observer(() => {
     return (
         <div className="channels">
             <div className="channels__header">
-                <span className="channels__title">Channels</span>
+                <span className="channels__title">Каналы:</span>
                 <span className="channels__counter">{channels.length}</span>
             </div>
-            <button className="btn btn-add-channel" onClick={() => toggleShowInput(!showInput)}>Add channel</button>
+            <button className="btn btn-add-channel" onClick={() => toggleShowInput(!showInput)}>Добавить</button>
             {showInput &&   <input  type="text" 
                                     className="input-add-channel" 
                                     placeholder="Type name channel..." 

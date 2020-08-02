@@ -7,17 +7,13 @@ function Pointers(props) {
    
     return (
         <> 
-            <div className="pointer-container-channels">
-                <div className="arrow"></div>
+            <div className="pointer pointer--channels">
                 <p className="pointer-text">Создавай каналы и общайся!.. Сам с собой"</p>
+                <div className="arrow arrow--rotate-channels"></div>
             </div>
-            <div className="pointer-container-persons">
+            <div className="pointer pointer--persons">
+                <div className="arrow arrow--rotate-persons"></div>
                 <p className="pointer-text">Переключайся между личностями!</p>
-                <div className="arrow"></div>
-            </div>
-            <div className="pointer-container-add">
-                <div className="arrow"></div>
-                <p className="pointer-text">Добавляй личности!</p>
             </div>
         </>
     )

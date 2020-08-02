@@ -29,7 +29,11 @@ const App = observer(() => {
           </Switch>
           <Route path={'/'} exact>
               <div className="template">
-                {/* <h1 className="template-title">А сколько личностей живет в тебе?</h1> */}
+                <h1 className="template-title">А сколько личностей живет в тебе?</h1>
+                <div className="content">
+                  <span className="content-description">Билли Милиган - человек в котором обитало 24 личности</span>
+                  <div className="img-wrap"></div>
+                </div>
 
                 <Pointers/>
                 

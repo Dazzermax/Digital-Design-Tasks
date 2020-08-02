@@ -1,4 +1,16 @@
+.pointer {
+    position: absolute;
 
+    &--channels {
+        top: 15%;
+    }
+
+    &--persons {
+        top: 70%;
+    }
+
+    
+}
 
 
 .arrow {
@@ -7,6 +19,23 @@
     width: 200px;
     height: 10px;
     background: rgb(108, 194, 119);
+    transition: 0.2s;
+
+    &--rotate-channels {
+        transform: rotate(-3deg);
+
+        &:hover {
+            transform: rotate(0deg);
+        }
+    }
+
+    &--rotate-persons {
+        transform: rotate(3deg);
+
+        &:hover {
+            transform: rotate(0deg);
+        }
+    }
 
     &:after {
         content: "";
