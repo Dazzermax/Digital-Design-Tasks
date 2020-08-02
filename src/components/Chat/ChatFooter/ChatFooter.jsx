@@ -8,6 +8,8 @@ import { observer } from 'mobx-react';
 const ChatFooter = observer(() => {
    const {sendMessage} = state;
    const enterKey = 13;
+
+   
     
     return (
         <div className="input-wrapper">
@@ -16,7 +18,6 @@ const ChatFooter = observer(() => {
                              onKeyDown = {
                                  (e) => {
                                      if (e.keyCode === enterKey) {
-                                        console.log(state.chats);
                                         sendMessage(e.target.value);
                                         e.target.value = '';
                                      }

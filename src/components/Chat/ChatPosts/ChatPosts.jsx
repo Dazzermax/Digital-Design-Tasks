@@ -4,13 +4,13 @@ import { observer } from 'mobx-react';
 import './ChatPosts.scss'
 
 const ChatPosts = observer(() => {
-    const { chats } = state;
+    const { channels } = state;
     return (
         <div className="posts">
             <ul className="posts-container">
-                {chats.map(chat => {
+                {channels[0].messages.map(chat => {
                     return (
-                        <li className="message">{chat}</li>
+                        <li className="message">Простоо чел пока что: {chat}</li>
                     )
                 })}
             </ul>

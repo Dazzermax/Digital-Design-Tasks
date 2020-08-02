@@ -11,7 +11,7 @@ let routesHeader = [
     },
     {
         url: '/support',
-        component: Profile,
+        component: ChatHeader,
         exact: true,
         title: 'support',
     },

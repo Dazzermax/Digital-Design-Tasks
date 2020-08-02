@@ -8,22 +8,24 @@ import './Chat.scss';
 
 function Chat () {
 
-    let header = routesHeader.map(route => {
-        return <Route path={route.url}
-                      component={route.component}
-                      exact={route.exact}
-                      key={route.url}
-                      title={route.title}
-                />
-      })
+    // let header = routesHeader.map(route => {
+    //     return <Route path={route.url}
+    //                   component={route.component}
+    //                   exact={route.exact}
+    //                   key={route.url}
+    //                   title={route.title}
+    //             />
+    // })
+
+
       
     return (
         
         <main className="chat">
             <Router>
-                {header}
-                <ChatPosts></ChatPosts>
-                <ChatFooter></ChatFooter>
+                <ChatHeader/>
+                <ChatPosts />
+                <ChatFooter />
             </Router>
         </main>
         

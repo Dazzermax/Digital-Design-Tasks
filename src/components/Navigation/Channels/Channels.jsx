@@ -1,11 +1,13 @@
 import React from 'react';
 import './Channels.scss';
+import state from '../../../store/mainStore';
 import { Link } from 'react-router-dom';
+import { observer } from 'mobx-react';
 
 
-const channels = ['general', 'support', 'marketing', 'thailand', 'jobs', 'startups', 'freelance'];
 
-function Channels() {
+const Channels = observer(() => {
+    const { channels } = state 
     return (
         <div className="channels">
             <div className="channels__header">
@@ -14,11 +16,11 @@ function Channels() {
             </div>
             <div className="channels__body">
                 {channels.map((channel, i) => {
-                    return <Link to={`/ ${channel}`} key = {i} className="channel">{`# ${channel}`}</Link>
+                    return <Link to={`/${channel.name}`} key = {i} className="channel">{`# ${channel.name}`}</Link>
                 })}
             </div>        
         </div>
     )
-}
+})
 
 export default Channels;

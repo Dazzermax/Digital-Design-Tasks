@@ -7,13 +7,38 @@ class ChatStore {
         this.sendMessage = this.sendMessage.bind(this);
     }
 
-    @observable chats = [];
-   
-
     @action sendMessage(value) {
-        this.chats.push(value)
+        this.channels[0].messages.push(value)
     };
 
+    @observable channels = [
+        
+        {
+            name: 'general',
+            messages: [],
+        }, 
+
+        {
+            name: 'support',
+            messages: [],
+        }, 
+
+        {
+            name: 'mark',
+            messages: [],
+        }, 
+    ]
+   
+
+    // @observable supportChat = {
+    //     name: 'support',
+    //     messages: [],
+    // }
+
+    // @observable markChat = {
+    //     name: 'marketing',
+    //     messages: [],
+    // }
 }
 
 
