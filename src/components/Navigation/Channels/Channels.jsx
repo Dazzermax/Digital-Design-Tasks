@@ -37,10 +37,12 @@ const Channels = observer(() => {
                             className={channel.name === selectedChannel ? "channel channel-active" : "channel"} 
                             onClick={() => setSelectedChannel(channel.name)}> 
                                     {`# ${channel.name}`}
-                                    <button className="btn btn-delete" 
-                                            onClick={() => deleteChannel(channel.name)}
-                                            title="Удалить" 
-                                    />
+                                    <Link to="/">
+                                        <button className="btn btn-delete" 
+                                                onClick={() => deleteChannel(channel.name)}
+                                                title="Удалить" 
+                                        />
+                                    </Link>
                             </Link>
                 })}
             </div>        

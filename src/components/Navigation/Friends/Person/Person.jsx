@@ -11,11 +11,11 @@ const Person = observer((props) => {
     return (
         <>
             <div className="person" onClick={() => setCurrentUser(props.user)}>
-                <div className="person__status"></div>
+                <div className={isCurrentUser ? "person__status person__status--active" : "person__status"}></div>
                 <div className="person__avatar"></div>
                 <div className="person__name">{props.user.name}</div>
-                {isCurrentUser ? <span>Eto vi</span> : null}
-                <button className="btn btn-delete" onClick={() => deletePerson(props.user.name)}>BOB</button>
+                {/* {isCurrentUser ? <span>Eto vi</span> : null} */}
+                <button className="btn btn-forget" onClick={() => deletePerson(props.user.name)}>Забыть</button>
             </div>
         </>
     )

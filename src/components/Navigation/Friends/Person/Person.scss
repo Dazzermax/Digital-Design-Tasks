@@ -7,6 +7,10 @@
         border: 5px solid #eee;
         border-radius: 50%;
         margin-right: 10px;
+
+        &--active {
+            border-color: #3c752f;
+        }
     }
 
     &__avatar {
@@ -24,9 +28,29 @@
     &__name {
         cursor: pointer;
         color: #3c752f;
+        max-width: 80px;
+        overflow: hidden;
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    .btn-forget {
+        margin-left: auto;
+        background-color: #e7a79c;
+        border: 1px solid #d4d1d1;
+        border-radius: 4px;
+        padding: 4px;
+        outline: none;
+        transition: 0.2s;
+
+        &:hover {
+            border: 1px solid #b0c4ac;
+        }
+
+        &:active {
+            background-color: rgb(233, 162, 141);
         }
     }
 

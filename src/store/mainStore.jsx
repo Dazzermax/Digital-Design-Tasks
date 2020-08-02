@@ -18,18 +18,27 @@ class ChatStore {
             name: 'general',
             messages: [],
         }, 
+
+        {
+            name: 'psycho',
+            messages: [],
+        }, 
     ]
 
 
     @observable users = [
         {
-            name: 'Oleg'
-        }
+            name: 'Billy'
+        },
+
+        {
+            name: 'Arthur'
+        },
     ];
 
     @observable currentUser = this.users[0];
 
-    @observable selectedChannel = this.channels[0].name;
+    @observable selectedChannel;
 
     @action addUser(name) {
         const user = {
