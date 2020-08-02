@@ -8,14 +8,10 @@ import { observer } from 'mobx-react';
 
 
 const Channels = observer(() => {
-    const { channels, addChannel } = state ;
+    const { channels, addChannel, setSelectedChannel, selectedChannel, deleteChannel } = state ;
     const enterKey = 13;
     const [showInput, toggleShowInput] = React.useState(false);
-
-    // let showInput = false;
-    // const toggleInput = () => {
-    //     showInput = !showInput;
-    // };
+  
     return (
         <div className="channels">
             <div className="channels__header">
@@ -39,7 +35,13 @@ const Channels = observer(() => {
           
             <div className="channels__body">
                 {channels.map((channel, i) => {
-                    return <Link to={`/${channel.name}`} key = {i} className="channel">{`# ${channel.name}`}</Link>
+                    return <Link to={`/${channel.name}`} 
+                            key = {i} 
+                            className={channel.name === selectedChannel ? "channel channel-active" : "channel"} 
+                            onClick={() => setSelectedChannel(channel.name)}> 
+                                    {`# ${channel.name}`}
+                                    <button onClick={() => deleteChannel(channel.name)}>DEL</button> 
+                            </Link>
                 })}
             </div>        
         </div>
