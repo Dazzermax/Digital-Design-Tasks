@@ -8,6 +8,7 @@ function Header() {
 
 	const {addPerson} = state;
 	const enterKey = 13;
+	const regEXp = /^[а-яА-ЯёЁa-zA-Z0-9]+$/; //любой набор из букв и цифр
 
 	return (
 		<header className="header">
@@ -22,8 +23,10 @@ function Header() {
 					onKeyDown={
 								(e) => {
 									if (e.keyCode === enterKey) {
-										addPerson(e.target.value);
-										e.target.value = '';
+										if (regEXp.test(e.target.value)) {
+											addPerson(e.target.value);
+											e.target.value = '';
+										} else e.target.value = '';
 									}
 								}
 							}

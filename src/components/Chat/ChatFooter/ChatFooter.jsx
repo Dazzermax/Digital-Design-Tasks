@@ -9,6 +9,7 @@ const ChatFooter = observer(props => {
    const {sendMessage} = state;
    const enterKey = 13;
    
+   
 	return (
 		<div className="input-wrapper">
 			<TextareaAutosize className="message-input" 
@@ -16,7 +17,7 @@ const ChatFooter = observer(props => {
 							onKeyDown = {
 								(e) => {
 									if (e.keyCode === enterKey) {
-										sendMessage(e.target.value, props.chatName);
+										sendMessage(e.target.value, props.chatName)
 										e.target.value = '';
 									}
 								}

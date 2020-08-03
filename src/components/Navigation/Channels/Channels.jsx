@@ -9,6 +9,7 @@ const Channels = observer(() => {
 	const { channels, addChannel, setSelectedChannel, selectedChannel, deleteChannel } = state ;
 	const enterKey = 13;
 	const [showInput, toggleShowInput] = React.useState(false);
+	const regEXp = /^[а-яА-ЯёЁa-zA-Z0-9]+$/; //любой набор из букв и цифр
   
 	return (
 		<div className="channels">
@@ -23,8 +24,10 @@ const Channels = observer(() => {
 								onKeyDown={
 										(e) => {
 											if (e.keyCode === enterKey) {
-												addChannel(e.target.value);
-												e.target.value = '';
+												if (regEXp.test(e.target.value)) {
+													addChannel(e.target.value);
+													e.target.value = '';
+												} else e.target.value = '';
 											}
 										}
 									}
