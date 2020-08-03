@@ -14,3 +14,7 @@
 
 Технологии:
 > React / Create-react-app / Mobx / React-router v4 / Scss / Es6
+
+---
+Установка и запуск:
+_npm install && npm start_
