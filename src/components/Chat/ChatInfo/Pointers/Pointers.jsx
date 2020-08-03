@@ -8,7 +8,7 @@ function Pointers(props) {
     return (
         <> 
             <div className="pointer pointer--channels">
-                <p className="pointer-text">Создавай каналы и общайся!.. Сам с собой"</p>
+                <p className="pointer-text">Создавай каналы и общайся!.. Сам с собой</p>
                 <div className="arrow arrow--rotate-channels"></div>
             </div>
             <div className="pointer pointer--persons">
