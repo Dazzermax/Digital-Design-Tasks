@@ -1,16 +1,17 @@
 import React from 'react'
-import state from '../../../store/mainStore';
 import { observer } from 'mobx-react';
+import state from '../../../store/mainStore';
 import './ChatPosts.scss'
 
-const ChatPosts = observer((props) => {
-	const { channels, currentUser } = state;
+const ChatPosts = observer(props => {
+
+	const { channels, currentPerson } = state;
 	const currentChat = channels.find(channel => channel.name === props.chatName);
 
-	function userTitle(userName) {
-	  if (userName == currentUser.name) {
+	function personTitle(personName) {
+	  if (personName == currentPerson.name) {
 			return 'Вы'
-	  } else return userName
+	  } else return personName
 	}
 
 	function parseDate(date) {
@@ -20,15 +21,12 @@ const ChatPosts = observer((props) => {
 		return hours + ':' + minutes
 	}
 	
-	
-	
-
 	let fiteredMessages;
 
 	if (props.filter != '') {
 		fiteredMessages = currentChat.messages.filter(message => message.messageText.toLowerCase()
-											  .includes(props.filter.toLowerCase()))
-	} else fiteredMessages = currentChat.messages
+											.includes(props.filter.toLowerCase()))
+	} else fiteredMessages = currentChat.messages;
   
 	return (
 		<div className="posts">
@@ -36,10 +34,10 @@ const ChatPosts = observer((props) => {
 				{fiteredMessages.map(message => {
 					return (
 						<li className="message">
-							<span className="user-name">{userTitle(message.userName) + ': '}</span> 
-							<p className="user-message">
+							<span className="person-name">{personTitle(message.personName) + ': '}</span> 
+							<p className="person-message">
 								{message.messageText}
-								<span className="data-message">{parseDate(message.date)}</span>
+								<span className="date-message">{parseDate(message.date)}</span>
 							</p>
 							
 						</li>

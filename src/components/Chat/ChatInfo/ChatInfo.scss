@@ -1,0 +1,36 @@
+
+.template {
+    background: radial-gradient(#cdf8c4c9 0%, rgb(190, 230, 181) 100%);
+    border: 1px solid #d4d1d1;
+    position: relative;
+    padding: 20px;
+    flex: 3;
+
+    .template-title {
+        text-align: center;
+        font-weight: 800;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.content-description {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+.img-wrap {
+    border: 1px solid #d4d1d1;
+    background-image: url(../../../assets/png/Billy-Miligan-main.png);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 400px;
+    margin: 30px 100px 0px auto;
+}
